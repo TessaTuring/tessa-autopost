@@ -19,7 +19,11 @@ PILLARS = [
     "Weekly reset (reviews, routines, planning the week ahead)",
 ]
 
-COVER_MOODS = ["hi", "surprised", "stop", "thinking", "laughing", "pointing", "explaining", "cozy"]
+# Candid, medium-wide cover photos of Tessa busy at her desk (never posed at the camera).
+COVER_MOODS = ["laptop", "notebook", "coffee", "phone", "planner", "reading", "thinking", "weekend"]
+# laptop: typing on a laptop | notebook: writing by hand | coffee: leaning back with a mug
+# phone: smiling at her phone | planner: planning with sticky notes | reading: curled up with a book
+# thinking: reading her screen, chin on hand | weekend: closing the laptop, done for the day
 
 SYSTEM = """You write Instagram carousels for Tessa Turing, a creator whose tagline is
 "I find the AI shortcuts so you don't have to." Her audience is busy everyday people (not
@@ -32,7 +36,9 @@ from the slide and use it in under a minute.
 
 Structure (5 to 8 slides total):
 1. One "cover" slide: a scroll-stopping hook title (max 55 characters) and a short subtitle
-   (max 45 characters). Pick the cover photo mood that best fits the hook.
+   (max 45 characters). Pick the cover photo that best fits the topic: laptop (typing), notebook (writing by hand),
+   coffee (relaxed with a mug), phone (on her phone), planner (planning/organizing), reading (with a book),
+   thinking (reading her screen), weekend (closing the laptop, wrap-up or reset topics).
 2. 3 to 6 middle slides of type "text" or "prompt". Prompt slides carry one copy-paste prompt
    with [square brackets] for the parts the reader fills in. Use text slides for a problem
    setup, a before/after example, or a tip.
