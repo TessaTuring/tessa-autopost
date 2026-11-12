@@ -1,5 +1,22 @@
 [
-  {"date": "2026-11-11", "topic": "Meet Tessa: what this account posts", "cover_mood": "hi"},
-  {"date": "2026-11-11", "topic": "5 prompts that clear your inbox in 10 minutes", "cover_mood": "surprised"},
-  {"date": "2026-11-11", "topic": "Stop saying sorry in emails: confident rewrite prompt", "cover_mood": "stop"}
+  {
+    "date": "2026-11-11",
+    "topic": "Meet Tessa: what this account posts",
+    "cover_mood": "hi"
+  },
+  {
+    "date": "2026-11-11",
+    "topic": "5 prompts that clear your inbox in 10 minutes",
+    "cover_mood": "surprised"
+  },
+  {
+    "date": "2026-11-11",
+    "topic": "Stop saying sorry in emails: confident rewrite prompt",
+    "cover_mood": "stop"
+  },
+  {
+    "date": "2026-11-13",
+    "topic": "A 3-prompt study loop to learn any topic: explain, quiz, fix the gaps",
+    "cover_mood": "explaining"
+  }
 ]
