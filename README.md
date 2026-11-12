@@ -1,6 +1,6 @@
 # Tessa Autopost
 
-Posts one Instagram carousel for @tessaturing every day, automatically.
+Posts one Instagram carousel for @tessa_turing every day, automatically.
 
 ## How it works
 
@@ -26,13 +26,13 @@ Times shift one hour later during daylight saving time (GitHub schedules run in 
 
 ## One-time setup
 
-### 1. Make @tessaturing a professional account
+### 1. Make @tessa_turing a professional account
 Instagram app: **Settings and activity → Account type and tools → Switch to professional account → Creator**.
 
 ### 2. Get an Instagram API token
 1. Go to <https://developers.facebook.com/apps> and log in with Facebook.
 2. **Create app** → use case **"Manage messaging & content on Instagram"** → finish creating the app.
-3. In the app: **Instagram → API setup with Instagram login → Generate access tokens → Add account**, and log in as @tessaturing.
+3. In the app: **Instagram → API setup with Instagram login → Generate access tokens → Add account**, and log in as @tessa_turing.
 4. Copy the **access token** and the **Instagram user ID** shown next to the account.
    The app can stay in development mode; it only needs to post to your own account.
 
