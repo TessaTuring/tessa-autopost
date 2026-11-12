@@ -1,0 +1,79 @@
+name: Publish today's post
+
+on:
+  schedule:
+    - cron: "0 13 * * *"   # 8 AM Eastern (9 AM during daylight time)
+  workflow_dispatch:
+    inputs:
+      date:
+        description: "Date to publish (YYYY-MM-DD). Leave empty for today."
+        required: false
+
+permissions:
+  contents: read
+  issues: write
+
+concurrency:
+  group: tessa-content
+  cancel-in-progress: false
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - run: pip install -r requirements.txt
+
+      - name: Check the review issue
+        id: check
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          DAY="${{ github.event.inputs.date }}"
+          [ -z "$DAY" ] && DAY=$(TZ=America/New_York date +%F)
+          echo "day=$DAY" >> "$GITHUB_OUTPUT"
+          TITLE="Post for $DAY"
+          ISSUE=$(gh issue list --state all --search "in:title \"$TITLE\"" --json number,title,state,labels \
+            --jq "[.[] | select(.title==\"$TITLE\")][0]")
+          if [ -z "$ISSUE" ] || [ "$ISSUE" = "null" ]; then
+            echo "::notice::No draft for $DAY. Nothing to post."; echo "go=no" >> "$GITHUB_OUTPUT"; exit 0
+          fi
+          NUM=$(echo "$ISSUE" | jq -r .number)
+          STATE=$(echo "$ISSUE" | jq -r .state)
+          POSTED=$(echo "$ISSUE" | jq -r '[.labels[].name] | index("posted") != null')
+          echo "issue=$NUM" >> "$GITHUB_OUTPUT"
+          if [ "$POSTED" = "true" ]; then
+            echo "::notice::Already posted."; echo "go=no" >> "$GITHUB_OUTPUT"
+          elif [ "$STATE" != "OPEN" ]; then
+            echo "::notice::Issue #$NUM was closed, so $DAY is skipped."; echo "go=no" >> "$GITHUB_OUTPUT"
+          else
+            echo "go=yes" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: Post to Instagram
+        if: steps.check.outputs.go == 'yes'
+        id: post
+        env:
+          IG_USER_ID: ${{ secrets.IG_USER_ID }}
+          IG_ACCESS_TOKEN: ${{ secrets.IG_ACCESS_TOKEN }}
+        run: echo "link=$(python scripts/publish.py ${{ steps.check.outputs.day }})" >> "$GITHUB_OUTPUT"
+
+      - name: Mark as posted
+        if: steps.check.outputs.go == 'yes'
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          gh issue comment ${{ steps.check.outputs.issue }} --body "Posted: ${{ steps.post.outputs.link }}"
+          gh issue edit ${{ steps.check.outputs.issue }} --add-label posted --remove-label scheduled
+          gh issue close ${{ steps.check.outputs.issue }}
+
+      - name: Report a failure on the issue
+        if: failure() && steps.check.outputs.issue != ''
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: gh issue comment ${{ steps.check.outputs.issue }} --body "Posting failed. See ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}"
