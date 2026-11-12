@@ -24,7 +24,7 @@ MUTED = (150, 140, 132)
 AMBER = (198, 126, 41)
 WARM_YELLOW = (255, 220, 158)
 WHITE = (255, 255, 255)
-HANDLE = "@tessaturing"
+HANDLE = "@tessa_turing"
 
 
 def font(weight: str, size: int) -> ImageFont.FreeTypeFont:
