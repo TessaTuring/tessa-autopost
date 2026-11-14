@@ -32,7 +32,9 @@ def call(method: str, path: str, **params) -> dict:
 
 def publish(day: str) -> str:
     post = json.loads((ROOT / "threads" / f"{day}.json").read_text())
-    user = os.environ["THREADS_USER_ID"].strip()
+    user = os.environ.get("THREADS_USER_ID", "").strip()
+    if not user or user == "me":  # no ID stored: ask Threads whose token this is
+        user = call("GET", "me", fields="id")["id"]
 
     container = call("POST", f"{user}/threads", media_type="TEXT", text=post["text"])["id"]
     time.sleep(5)  # Meta suggests a short wait between creating and publishing
