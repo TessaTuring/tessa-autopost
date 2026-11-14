@@ -101,6 +101,11 @@ Hard rules:
   "I cooked", personal income, places she went).
 - No made-up statistics, no income or results claims, no medical, legal or financial advice.
 - Prompts must be genuinely useful, specific and correct. No filler slides.
+- ZERO contrast structures anywhere in the slides or caption: no "it's not X, it's Y", "not just X
+  but Y", "X is the easy part, Y is what gets you", "X isn't the problem, Y is", "no X, no Y, just Z",
+  "less about X, more about Y", "rather than", "instead of", "stop X, start Y". State only the true
+  half of a point, once. Also no "Here's the thing" style openers, no tidy motivational endings, and
+  never use journey, unlock, game-changer, delve, transform, empower, navigate, leverage or seamless.
 - Keep slide text short: titles max 60 characters, body max 200 characters, prompts max 260.
 - Do not repeat a topic or hook from the "recently posted" list.
 - Caption: a hook line, 2 to 4 short lines explaining the tip, a save reminder, a pointer to
@@ -140,6 +145,30 @@ EMOJI = re.compile(
     "[\U0001F000-\U0001FAFF\U00002600-\U000027BF\U0001F1E6-\U0001F1FF\U0000FE0F\U0000200D\U00002B00-\U00002BFF]"
 )
 BANNED = re.compile(r"\b(ai[- ]creator|ai[- ]character|ai[- ]generated|i'?m an ai|i am an ai)\b", re.I)
+
+
+# Sentence shapes that read as machine-written (contrastive reveals and friends), checked on slide
+# text and the caption. Prompts are skipped because instructions like "Don't ..." are fine there.
+NEG = r"(?:\b(?:not|isn't|aren't|wasn't|weren't|doesn't|don't|didn't|never|no)\b|n't\b)"
+TELLS = [
+    (NEG + r"[^.!?\n]{0,60}[.!?;,]\s+(?:and\s+)?(?:it's|it is|it (?:\w+ )?(?:just )?means|you're|you are|they're|this is|but|just|instead)\b", 'a "not X, it\'s Y" contrast'),
+    (r"\bnot (?:just|only|merely)\b", '"not just X but Y"'),
+    (r"\b(?:isn't|aren't|wasn't|weren't|doesn't mean)\b[^.!?\n]{1,50}[,.]\s*\w+(?:\s\w+)?\s+(?:is|are|was|means)\b", '"X isn\'t Y, Z is"'),
+    (r"\b(?:no|not)\s+\w+(?:\s+\w+){0,3},\s*(?:no|not)\s+\w+", '"no X, no Y"'),
+    (r"\bless (?:about )?[^.,!?]{1,40},\s*more\b|\brather than\b|\binstead of\b", "a contrast"),
+    (r"\bthe easy part\b|\bthe hard part\b|\bwhat (?:really )?gets you\b", 'an "easy part / hard part" contrast'),
+    (r"\bstop\b[^.!?]{1,50}[.!?]\s+start\b", '"stop X, start Y"'),
+    (r"\b(?:here's the thing|let's be honest|let that sink in|read that again|the truth is|the real \w+ is)\b", "a drama opener"),
+    (r"\b(?:journey|navigat\w+|unlock\w*|game[- ]?changer|empower\w*|transform\w*|delve|seamless\w*|leverage)\b", "a banned word"),
+]
+
+
+def find_tell(text: str) -> str | None:
+    for pat, label in TELLS:
+        m = re.search(pat, text, re.I | re.M)
+        if m:
+            return f"{label} ({m.group(0)!r})"
+    return None
 
 
 class InvalidPost(Exception):
@@ -182,6 +211,13 @@ def validate(post: dict, roundup: bool = False) -> dict:
             s["kicker"] = names[s["kicker"].lower()]
         if re.search(r"\$\d|\bfree\b|\bpric", " ".join(s["title"] + " " + s["body"] for s in mids), re.I):
             raise InvalidPost("do not mention prices or whether a tool is free")
+
+    checked = [post["cover_title"], post["cover_subtitle"], post["caption"]]
+    checked += [s[k] for s in post["slides"] for k in ("kicker", "title", "body")]
+    for text in checked:
+        tell = find_tell(text)
+        if tell:
+            raise InvalidPost(f"it contains {tell}. Rewrite that part as one plain true statement")
 
     all_text = json.dumps(post)
     if BANNED.search(all_text):
