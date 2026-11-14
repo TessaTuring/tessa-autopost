@@ -1,0 +1,6 @@
+{
+  "date": "2026-11-14",
+  "topic": "Half a bag of spinach",
+  "text": "Half a bag of spinach and some leftover rice can still turn into dinner. List what's in the fridge and ask:\n\nI have [ingredients]. Give me 3 dinner ideas that use mostly these, with simple steps and a cook time for each.\n\nAdd \"no oven\" or \"kid-friendly\" if that matters tonight. What's the oddest leftover combination sitting in your fridge right now?",
+  "source": "library"
+}
