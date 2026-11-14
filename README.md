@@ -17,6 +17,20 @@ Covers rotate through 8 Tessa photos in `assets/covers/`.
 
 Times shift one hour later during daylight saving time (GitHub schedules run in UTC).
 
+## Threads (text-only daily post)
+
+| When (Eastern) | What happens | Your part |
+|---|---|---|
+| ~6:30 PM the night before | Tomorrow's text-only post is picked and GitHub opens an issue **"Threads for YYYY-MM-DD"** with the exact text. | Nothing. |
+| ~11 AM (noon in daylight time) | If that issue is still open, the post goes to Threads and the issue closes with a link. | Nothing. |
+| To skip a day | Close that day's Threads issue before 11 AM. | One tap. |
+| Mondays | The 60-day Threads token is refreshed and stored. | Nothing. |
+
+**Library first:** each night the next unused post for that weekday comes from the reviewed 28-post library (`content/threads_library.json`, 4 per weekday, about four weeks). When a weekday runs out, Claude writes a fresh one under the same rules, and an automatic check rejects contrast sentences ("not X, it's Y" and relatives), banned words, dashes, emoji, links and any AI-identity wording. Rhythm: Mon and Thu point to the free guide, Wed and Fri to the $7 pack, Tue, Sat and Sun are pure value ending on a question. Edit the rules in `scripts/threads_generate.py`.
+
+Extra secrets: `THREADS_USER_ID`, `THREADS_ACCESS_TOKEN` (long-lived Threads token; paste it yourself, never into chat), `GH_SECRETS_TOKEN` (fine-grained GitHub token for this repo with **Secrets: Read and write**, needed for the Monday Threads token refresh).
+Workflows: `threads-draft.yml`, `threads-publish.yml`, `threads-refresh-token.yml`. Test: **Actions → Threads - draft tomorrow's post → Run workflow**.
+
 ## Costs
 
 - **Claude API:** a few cents per post (roughly $3 to $10 a month).
