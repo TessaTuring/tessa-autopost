@@ -1,0 +1,170 @@
+[
+  {
+    "weekday": 0,
+    "type": "free",
+    "topic": "Sort the inbox by subject line",
+    "text": "If your inbox has a couple hundred unread emails, copy just the subject lines and senders and paste them into ChatGPT or Claude with this:\n\nSort these into Reply today, Reply this week, Delegate and Ignore, with one line on why: [paste list]\n\nYou get a short to-do list out of a wall of bold text. It's the first prompt in my free 10 AI Shortcuts guide, which you can grab from the link in my profile."
+  },
+  {
+    "weekday": 0,
+    "type": "free",
+    "topic": "Turning down the committee",
+    "text": "The email asking you to join one more committee has been sitting there all week. Paste this into any AI assistant and answer it today:\n\nWrite a polite, firm reply turning down [request] from [person and how I know them]. Keep it warm and short, and offer [an alternative, if any].\n\nRead it once, change a word if you like, and send. This one is in my free 10 AI Shortcuts guide along with nine others. The link is in my profile."
+  },
+  {
+    "weekday": 0,
+    "type": "free",
+    "topic": "Forty replies deep",
+    "text": "Forty replies into a reply-all thread, all you really need is your part. Paste the whole thread into ChatGPT or Claude and ask:\n\nSummarize this thread in 5 bullet points, then list each action item with who owns it and the deadline: [paste thread]\n\nCheck any dates against the original emails before you act on them. It's shortcut 4 in the free guide linked in my profile."
+  },
+  {
+    "weekday": 0,
+    "type": "free",
+    "topic": "The reply you keep deleting",
+    "text": "Some replies get started and deleted five times. Paste the email in and tell the AI what you want the answer to be:\n\nHere's an email I got: [paste]. Write a reply that [says yes / asks for more time / answers their question]. Under 100 words, friendly and professional.\n\nIf the first draft feels stiff, type \"warmer\" or \"shorter\" and it'll redo it. My free guide has ten prompts like this one, and it's the first link in my profile."
+  },
+  {
+    "weekday": 1,
+    "type": "value",
+    "topic": "The task hiding inside a task",
+    "text": "Most to-do lists have an item like \"sort out the car\" that is secretly a phone call and a booking. Paste your list into an AI assistant with this:\n\nSplit any task here that's really several tasks, then put everything in order with a time estimate for each: [paste list]\n\nSeeing the real steps makes the first one easier to start. Which item on your list is hiding the most steps?"
+  },
+  {
+    "weekday": 1,
+    "type": "value",
+    "topic": "A plan with slack built in",
+    "text": "A lot of day plans fall apart by mid-morning because they assume every meeting ends on time. This prompt adds the slack for you:\n\nI have [hours] of working time today, with fixed events at [times]. My tasks with rough durations: [list]. Make a time-blocked schedule with breaks and a 20% buffer.\n\nWhat time of day does your schedule usually start slipping?"
+  },
+  {
+    "weekday": 1,
+    "type": "value",
+    "topic": "Moved to tomorrow again",
+    "text": "The task you've moved to tomorrow four days running usually needs a smaller first step. Try this:\n\nI keep putting off [task]. Ask me 3 questions to figure out why, then give me one first step I can finish in 5 minutes.\n\nAnswer the questions honestly and the step gets oddly specific. What's the task that keeps sliding to tomorrow on your list?"
+  },
+  {
+    "weekday": 1,
+    "type": "value",
+    "topic": "Permission to drop things",
+    "text": "When your week has more tasks than hours, ask an AI to be the friend who tells you what to drop:\n\nMy goal this week is [goal]. Here are my tasks: [list]. Which ones move the goal forward most, and which could I drop or push to next week? Be blunt.\n\nCrossing something off is easier once someone else suggested it. If you ran this today, what would you drop first?"
+  },
+  {
+    "weekday": 2,
+    "type": "paid",
+    "topic": "Teach it your voice",
+    "text": "If AI drafts sound stiff and generic, show it how you write before you ask for anything. Paste in a few of your own messages and try:\n\nHere are 3 things I wrote: [paste samples]. Describe my writing style in 5 bullet points, then use that style for everything you write for me in this chat.\n\nThat's prompt 11 in my 50 AI Shortcuts pack, which you'll find in my profile for $7."
+  },
+  {
+    "weekday": 2,
+    "type": "paid",
+    "topic": "Half the length",
+    "text": "A 600-word email that should have been 200 words has a one-line fix:\n\nCut this to half its length and keep the main points and my voice: [paste text]\n\nRead the shorter version out loud before you send it, since that's where awkward bits show up. The writing section of my $7 pack has ten prompts like this one, including headlines and a bio in different lengths. It's linked in my profile."
+  },
+  {
+    "weekday": 2,
+    "type": "paid",
+    "topic": "Your bio, once",
+    "text": "Every new profile and event form seems to want your bio in a different length. Write it once with this:\n\nWrite my bio in 3 versions: one line, 50 words and 150 words. About me: [role, experience, what people know me for, tone].\n\nKeep the one-liner in your phone notes so it's always ready to paste. This is one of the 50 prompts in my $7 shortcuts pack, which you'll find through the link in my profile."
+  },
+  {
+    "weekday": 2,
+    "type": "paid",
+    "topic": "Ten headlines, pick one",
+    "text": "Naming a newsletter or a school fundraiser flyer gets easier with ten options in front of you. Ask for them and pick the one you'd click:\n\nGive me 10 headline options for this, from straightforward to curiosity-driven, and mark your top 3: [paste piece or summary]\n\nIf two are close, ask it to combine them. Prompt 15 in my 50 AI Shortcuts pack does exactly this, and the whole pack costs $7 through my profile link."
+  },
+  {
+    "weekday": 3,
+    "type": "free",
+    "topic": "The yearly total",
+    "text": "Open last month's bank statement and copy every charge that repeats, leaving out account numbers. Then paste the list into any AI assistant:\n\nHere are my recurring charges: [paste list]. Group them by type, total the monthly and yearly cost, and flag likely duplicates or ones I could pause.\n\nThe yearly total is the number worth looking at. This is shortcut 9 in my free guide. Grab it from my profile if you'd like all ten."
+  },
+  {
+    "weekday": 3,
+    "type": "free",
+    "topic": "The letter on the counter",
+    "text": "An insurance letter full of phrases like \"explanation of benefits\" can sit on the counter for weeks. Paste the text in and ask:\n\nExplain this letter in plain English: what it says, what I owe or need to do, and any deadline: [paste text]\n\nCover your policy number first, and call the company to confirm anything with money attached. My free guide has 10 more everyday prompts, link in my profile."
+  },
+  {
+    "weekday": 3,
+    "type": "free",
+    "topic": "Double-charged",
+    "text": "When a company charges you twice, the email that gets it fixed is usually calm and has every fact in order. Get those facts together first:\n\nWrite a firm, polite complaint to [company] about [problem]. Include what happened, the date, what I've tried so far, and exactly what I want them to do: [details]\n\nAttach the receipt and keep a copy. If you'd like more copy-paste prompts, my free 10 AI Shortcuts guide is waiting in my profile."
+  },
+  {
+    "weekday": 3,
+    "type": "free",
+    "topic": "Calling about the internet bill",
+    "text": "Calling your internet provider to ask for a better rate goes much easier with a script in front of you:\n\nWrite a short, friendly script for calling [provider] to ask for a lower rate on my [bill]. I've been a customer for [time] and pay [amount] a month. Include what to say if they refuse.\n\nHave a competitor's current price ready to mention. More prompts for everyday chores are in my free guide, which is linked in my profile."
+  },
+  {
+    "weekday": 4,
+    "type": "paid",
+    "topic": "A patient tutor",
+    "text": "Want to finally understand how a heat pump or compound interest works? Ask the AI to teach you like a patient tutor:\n\nTeach me [topic] in 5 short steps, starting from zero. After each step, ask me one question to check I understood before moving on.\n\nIt feels like a lesson with someone who has all day. This is prompt 31 of the 50 in my $7 shortcuts pack, linked from my profile."
+  },
+  {
+    "weekday": 4,
+    "type": "paid",
+    "topic": "Two phone plans in a table",
+    "text": "Choosing between two phone plans or two vacuum cleaners gets simpler when you can see them side by side:\n\nCompare [option A] and [option B] for [my situation] in a table with cost, pros, cons and who each suits best. Tell me what to double-check before I decide.\n\nThen confirm the prices on the actual websites, since they change often. The research section of my $7 pack has ten prompts like this, and the link is in my profile."
+  },
+  {
+    "weekday": 4,
+    "type": "paid",
+    "topic": "The memo full of acronyms",
+    "text": "A work memo stuffed with acronyms can take three reads to understand. Paste it in with this:\n\nExplain every piece of jargon in this text in plain English, then rewrite the whole thing simply: [paste text]\n\nIf the memo is confidential, swap out names and numbers before pasting. Decoding jargon is prompt 38 in my 50 AI Shortcuts pack. You can get the pack for $7 from my profile."
+  },
+  {
+    "weekday": 4,
+    "type": "paid",
+    "topic": "Flashcards from your notes",
+    "text": "Notes for a work certification or a teenager's history test can become a study deck in about a minute. Paste them into any AI assistant:\n\nTurn these notes into 15 question-and-answer flashcards, from easy to hard: [paste notes]\n\nThen ask it to quiz you one card at a time and tell you which ones you missed. Flashcards are prompt 37 in my 50 AI Shortcuts pack, and the pack lives at the link in my profile for $7."
+  },
+  {
+    "weekday": 5,
+    "type": "value",
+    "topic": "Half a bag of spinach",
+    "text": "Half a bag of spinach and some leftover rice can still turn into dinner. List what's in the fridge and ask:\n\nI have [ingredients]. Give me 3 dinner ideas that use mostly these, with simple steps and a cook time for each.\n\nAdd \"no oven\" or \"kid-friendly\" if that matters tonight. What's the oddest leftover combination sitting in your fridge right now?"
+  },
+  {
+    "weekday": 5,
+    "type": "value",
+    "topic": "Twenty minutes a day",
+    "text": "Spreading the cleaning across the week in short daily chunks keeps Saturday free. Ask for a schedule built around your home:\n\nMake a weekly cleaning schedule for a [size] home with [who lives there], 20 minutes a day, so nothing big piles up.\n\nTape it to the fridge and see how the first week goes. Which room in your place always gets left for last?"
+  },
+  {
+    "weekday": 5,
+    "type": "value",
+    "topic": "Birthday in three days",
+    "text": "When there's a birthday in three days and you still have no idea what to get, describe the person in detail and let the AI brainstorm:\n\nGive me 10 gift ideas for [person] who loves [interests], budget [amount]. Mix practical gifts with experiences, and mark the ones I could still get by [date].\n\nThe more specific the interests, the better the list gets. Who's the hardest person to shop for in your life?"
+  },
+  {
+    "weekday": 5,
+    "type": "value",
+    "topic": "The packing list you reuse",
+    "text": "A packing list you can reuse every trip saves the last-minute scramble. Make one with this:\n\nWrite a packing checklist for a [number]-day trip to [place] in [month] for [who's going]. Group it by bag, and add a short list of things to do before leaving the house.\n\nSave it in your notes and tweak it after each trip. What's the one thing you always forget to pack?"
+  },
+  {
+    "weekday": 6,
+    "type": "value",
+    "topic": "Ten-minute week review",
+    "text": "Sunday evening is a good time for a ten-minute review of the week, and an AI can ask the questions for you:\n\nAsk me 7 questions, one at a time, about what went well this week and what to change next week. Summarize my answers at the end.\n\nType fast and skip the polish, since nobody else reads it. What's one thing from this week you'd happily repeat?"
+  },
+  {
+    "weekday": 6,
+    "type": "value",
+    "topic": "Dinners and one grocery list",
+    "text": "On Sunday afternoon you can get a week of dinners and one grocery list, sorted by aisle, from a single prompt:\n\nPlan [number] dinners this week for [number of people]. We like [foods], we avoid [foods], and we have [time] to cook on weeknights. Give me one grocery list sorted by store aisle.\n\nCheck the cupboards against the list before you shop. Which weeknight is hardest to get dinner on the table?"
+  },
+  {
+    "weekday": 6,
+    "type": "value",
+    "topic": "Empty your head first",
+    "text": "If the week ahead already feels crowded, empty your head into one message before Monday starts:\n\nHere's everything on my mind for the coming week: [paste messy list]. Sort it into Today, This week, Later and Drop, and flag anything with a deadline.\n\nThe Drop pile tends to be the most satisfying part. What's something you'd love to move to Drop this week?"
+  },
+  {
+    "weekday": 6,
+    "type": "value",
+    "topic": "Before Monday finds it",
+    "text": "Copy next week's calendar into a message and let the AI spot the problems before Monday does:\n\nHere's my calendar for next week: [paste events]. Point out days with back-to-back meetings and no breaks, and list anything I need to prepare for ahead of time.\n\nMove one thing tonight while it's still easy. Which day next week already looks too full?"
+  }
+]
