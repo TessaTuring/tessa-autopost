@@ -17,11 +17,11 @@ ROOT = Path(__file__).resolve().parent.parent
 FONTS = ROOT / "assets" / "fonts"
 
 W, H, M = 1080, 1350, 88
-CREAM = (246, 239, 229)
+CREAM = (251, 249, 247)
 INK = (43, 36, 32)
 INK_SOFT = (70, 62, 57)
 MUTED = (150, 140, 132)
-AMBER = (198, 126, 41)
+AMBER = (190, 84, 110)
 WARM_YELLOW = (255, 220, 158)
 WHITE = (255, 255, 255)
 HANDLE = "@tessa_turing"
@@ -68,7 +68,53 @@ def draw_lines(d: ImageDraw.ImageDraw, lines, f, color, x, y, spacing, align="le
     return y
 
 
+BLUSH = (247, 222, 226)
+SAGE = (214, 228, 216)
+SKY = (220, 232, 246)
+ROSE = (190, 84, 110)
+PAPER = (252, 250, 248)
+
+
+def graphic_cover(slide: dict, page: str) -> Image.Image:
+    """Bright text-only cover: soft color shapes, a label pill, a big title."""
+    img = Image.new("RGB", (W, H), PAPER)
+    d = ImageDraw.Draw(img)
+    d.ellipse((W - 520, -260, W + 260, 520), fill=BLUSH)
+    d.ellipse((-300, H - 560, 420, H + 160), fill=SAGE)
+    d.ellipse((W - 260, H - 420, W + 120, H - 40), fill=SKY)
+
+    small = font("SemiBold", 28)
+    d.text((M, 70), HANDLE, font=small, fill=MUTED)
+    d.text((W - M - small.getlength(page), 70), page, font=small, fill=MUTED)
+
+    tw = W - 2 * M
+    label = (slide.get("kicker") or "AI shortcut").upper()
+    lf = font("Bold", 30)
+    while lf.getlength(label) > tw - 64 and lf.size > 20:
+        lf = font("Bold", lf.size - 2)
+    tf, sf = font("ExtraBold", 92), font("SemiBold", 44)
+    t_lines = wrap(slide["title"], tf, tw)
+    while len(t_lines) > 4 and tf.size > 64:
+        tf = font("ExtraBold", tf.size - 6)
+        t_lines = wrap(slide["title"], tf, tw)
+    s_lines = wrap(slide.get("subtitle", ""), sf, tw) if slide.get("subtitle") else []
+    pill_h = lf.size + 36
+    total = pill_h + 44 + block_height(t_lines, tf, 1.08) + (28 + block_height(s_lines, sf, 1.3) if s_lines else 0)
+    y = (H - total) // 2
+    d.rounded_rectangle((M, y, M + lf.getlength(label) + 64, y + pill_h), radius=pill_h // 2, fill=INK)
+    d.text((M + 32, y + 16), label, font=lf, fill=WHITE)
+    y += pill_h + 44
+    y = draw_lines(d, t_lines, tf, INK, M, y, 1.08)
+    if s_lines:
+        draw_lines(d, s_lines, sf, ROSE, M, y + 28, 1.3)
+    sw = font("SemiBold", 30)
+    d.text((W - M - sw.getlength("swipe  >"), H - 120), "swipe  >", font=sw, fill=INK_SOFT)
+    return img
+
+
 def cover(slide: dict, page: str) -> Image.Image:
+    if not slide.get("photo"):
+        return graphic_cover(slide, page)
     photo = Image.open(ROOT / slide["photo"]).convert("RGB")
     scale = max(W / photo.width, H / photo.height)
     photo = photo.resize((round(photo.width * scale), round(photo.height * scale)), Image.LANCZOS)
@@ -95,7 +141,7 @@ def cover(slide: dict, page: str) -> Image.Image:
     y = H - 140 - th - (sh + 18 if s_lines else 0)
     y = draw_lines(d, t_lines, tf, WHITE, M, y, 1.12) + 18
     if s_lines:
-        draw_lines(d, s_lines, sf, WARM_YELLOW, M, y, 1.3)
+        draw_lines(d, s_lines, sf, (255, 214, 224), M, y, 1.3)
     small = font("SemiBold", 28)
     d.text((M, H - 90), HANDLE, font=small, fill=(235, 230, 225))
     d.text((W - M - small.getlength(page), H - 90), page, font=small, fill=(235, 230, 225))
@@ -140,7 +186,7 @@ def card_slide(slide: dict, page: str) -> Image.Image:
     for b in blocks:
         if b[0] == "card":
             ch = h_of(b)
-            d.rounded_rectangle((M, y + 8, M + tw, y + ch + 8), radius=34, fill=(232, 224, 213))
+            d.rounded_rectangle((M, y + 8, M + tw, y + ch + 8), radius=34, fill=(244, 222, 228))
             d.rounded_rectangle((M, y, M + tw, y + ch), radius=34, fill=WHITE)
             d.text((M + pad, y + pad - 6), "COPY THIS PROMPT", font=font("Bold", 26), fill=AMBER)
             draw_lines(d, b[1], b[2], b[3], M + pad, y + pad + label_h, b[4])

@@ -10,7 +10,7 @@ import json
 import sys
 
 from common import DRAFTS, ROOT, load_history, raw_url, save_history, today_et
-from generate import PILLARS, generate
+from generate import PERSONAS, PILLARS, TOOLS_PILLAR, generate
 from render import render
 
 
@@ -23,7 +23,11 @@ def main() -> None:
 
     history = load_history()
     pillar = PILLARS[day.weekday()]
-    post = generate(pillar, [h["topic"] for h in history], day.strftime("%A, %B %d"))
+    persona = None
+    if day.weekday() == 4:  # Fridays: AI tool picks for one kind of person, rotating weekly
+        pillar = TOOLS_PILLAR
+        persona = PERSONAS[((day - dt.date(2026, 11, 20)).days // 7) % len(PERSONAS)]
+    post = generate(pillar, [h["topic"] for h in history], day.strftime("%A, %B %d"), persona)
 
     # Avoid reusing the same cover photo two days in a row.
     mood = post["cover_mood"]
@@ -31,8 +35,13 @@ def main() -> None:
         from generate import COVER_MOODS
 
         mood = COVER_MOODS[(COVER_MOODS.index(mood) + 1) % len(COVER_MOODS)]
+    cover_slide = {"type": "cover", "title": post["cover_title"], "subtitle": post["cover_subtitle"]}
+    if mood == "graphic":
+        cover_slide["kicker"] = f"AI tools for {persona}" if persona else "AI shortcut"
+    else:
+        cover_slide["photo"] = f"assets/covers/{mood}.jpg"
     slides = [
-        {"type": "cover", "photo": f"assets/covers/{mood}.jpg", "title": post["cover_title"], "subtitle": post["cover_subtitle"]},
+        cover_slide,
         *post["slides"],
     ]
     paths = render(slides, out)

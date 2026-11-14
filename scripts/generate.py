@@ -19,11 +19,61 @@ PILLARS = [
     "Weekly reset (reviews, routines, planning the week ahead)",
 ]
 
-# Candid, medium-wide cover photos of Tessa busy at her desk (never posed at the camera).
-COVER_MOODS = ["laptop", "notebook", "coffee", "phone", "planner", "reading", "thinking", "weekend"]
-# laptop: typing on a laptop | notebook: writing by hand | coffee: leaning back with a mug
-# phone: smiling at her phone | planner: planning with sticky notes | reading: curled up with a book
-# thinking: reading her screen, chin on hand | weekend: closing the laptop, done for the day
+# Cover options. Photo covers are candid, medium-wide shots in a bright, modern work-from-home
+# setting (Tessa busy, never posing at the camera). Some covers have no Tessa at all.
+# Only covers whose photo exists in assets/covers/ are offered; "graphic" needs no photo.
+COVERS = {
+    "graphic": "no photo, a clean bright text-only design (best for tool roundups and lists; use it for about 1 in 3 posts)",
+    "flatlay": "no person, an overhead shot of a bright desk with laptop, phone and iced coffee (planning, writing, tools)",
+    "desk": "Tessa typing at her bright home-office desk with an iced coffee (email, writing, work, planning, productivity)",
+    "call": "Tessa on a video call at her desk with earbuds (meetings, work, research)",
+    "phone": "Tessa leaning back in her desk chair, smiling at her phone with an iced coffee (texts, messages, quick tips)",
+    "kitchen": "Tessa at a bright kitchen counter with her laptop and phone (meals, home, errands, money)",
+    "sofa": "Tessa on the sofa with her laptop (evening inbox, weekend, learning)",
+    "done": "Tessa closing her laptop with a smile, done for the day (weekly reset, wrap-ups)",
+}
+COVER_DIR = __import__("pathlib").Path(__file__).resolve().parent.parent / "assets" / "covers"
+COVER_MOODS = [m for m in COVERS if m == "graphic" or (COVER_DIR / f"{m}.jpg").exists()]
+
+# Fridays: a roundup of AI tools for one kind of person. Only these tools may be named, and only
+# for what is written here (no prices, no "free" claims, no claims that Tessa tested them).
+TOOLS = {
+    "ChatGPT": "general AI assistant for writing, planning, brainstorming and questions",
+    "Claude": "AI assistant that is good with long documents, writing and summarizing files",
+    "Gemini": "Google's AI assistant, also built into Gmail, Docs and other Google apps",
+    "Microsoft Copilot": "Microsoft's AI assistant in Windows, Edge and Microsoft 365 apps like Word and Outlook",
+    "Perplexity": "AI search that answers questions and shows the sources it used",
+    "NotebookLM": "Google tool where you upload your own documents and ask questions about them or get summaries",
+    "Canva": "design app with AI features for social posts, flyers and presentations",
+    "Grammarly": "checks spelling, grammar and tone as you write in most apps",
+    "Otter.ai": "records and transcribes meetings and makes notes from them",
+    "Fathom": "AI notetaker that joins video calls and writes a summary",
+    "Gamma": "turns an outline or notes into a slide deck or document with AI",
+    "Notion AI": "AI inside Notion for notes, docs, to-do lists and summaries",
+    "Goblin.tools": "small free-standing tools, including one that breaks a task into tiny steps",
+    "CapCut": "video editor with automatic captions and quick AI edits",
+    "Descript": "edit audio and video by editing the transcript like a document",
+    "Zapier": "connects apps so routine steps happen automatically",
+    "Reclaim.ai": "AI calendar helper that finds time for tasks and habits around meetings",
+    "Motion": "AI planner that schedules your tasks into your calendar",
+    "ElevenLabs": "AI voice tool for voiceovers and reading text aloud",
+    "Khanmigo": "Khan Academy's AI tutor and teaching assistant",
+}
+PERSONAS = [
+    "stay-at-home parents",
+    "small business owners",
+    "remote employees",
+    "college students",
+    "teachers",
+    "freelancers",
+    "job seekers",
+    "people with a side hustle",
+    "new managers",
+    "retirees and anyone new to AI",
+    "busy caregivers",
+    "real estate agents",
+]
+TOOLS_PILLAR = "AI tool picks for one kind of person"
 
 SYSTEM = """You write Instagram carousels for Tessa Turing, a creator whose tagline is
 "I find the AI shortcuts so you don't have to." Her audience is busy everyday people (not
@@ -36,9 +86,8 @@ from the slide and use it in under a minute.
 
 Structure (5 to 8 slides total):
 1. One "cover" slide: a scroll-stopping hook title (max 55 characters) and a short subtitle
-   (max 45 characters). Pick the cover photo that best fits the topic: laptop (typing), notebook (writing by hand),
-   coffee (relaxed with a mug), phone (on her phone), planner (planning/organizing), reading (with a book),
-   thinking (reading her screen), weekend (closing the laptop, wrap-up or reset topics).
+   (max 45 characters). Pick the cover that best fits the topic (cover_mood) from this list:
+{covers}
 2. 3 to 6 middle slides of type "text" or "prompt". Prompt slides carry one copy-paste prompt
    with [square brackets] for the parts the reader fills in. Use text slides for a problem
    setup, a before/after example, or a tip.
@@ -97,7 +146,7 @@ class InvalidPost(Exception):
     pass
 
 
-def validate(post: dict) -> dict:
+def validate(post: dict, roundup: bool = False) -> dict:
     mids = [s for s in post["slides"] if s["type"] in ("text", "prompt")]
     ctas = [s for s in post["slides"] if s["type"] == "cta"]
     if not (3 <= len(mids) <= 6):
@@ -118,6 +167,22 @@ def validate(post: dict) -> dict:
     if len(post["cover_title"]) > 70:
         raise InvalidPost("cover title too long")
 
+    if post["cover_mood"] not in COVER_MOODS:
+        post["cover_mood"] = "graphic"
+    if roundup:
+        tool_slides = [s for s in mids if s["type"] == "text"]
+        names = {t.lower(): t for t in TOOLS}
+        unknown = [s["kicker"] for s in tool_slides if s["kicker"].lower() not in names]
+        if len(tool_slides) < 3 or unknown:
+            raise InvalidPost(
+                "a tool roundup needs 3 to 5 text slides whose kicker is exactly one tool name from the "
+                f"allowed list (unknown: {unknown})"
+            )
+        for s in tool_slides:
+            s["kicker"] = names[s["kicker"].lower()]
+        if re.search(r"\$\d|\bfree\b|\bpric", " ".join(s["title"] + " " + s["body"] for s in mids), re.I):
+            raise InvalidPost("do not mention prices or whether a tool is free")
+
     all_text = json.dumps(post)
     if BANNED.search(all_text):
         raise InvalidPost("mentions AI identity")
@@ -125,14 +190,32 @@ def validate(post: dict) -> dict:
     return post
 
 
-def generate(pillar: str, recent_topics: list[str], date_label: str) -> dict:
+def roundup_brief(persona: str) -> str:
+    tools = "\n".join(f"- {name}: {what}" for name, what in TOOLS.items())
+    return (
+        f"Today is a TOOL ROUNDUP: \"AI tools worth trying if you're one of the {persona}\".\n"
+        "Structure: cover (cover_mood 'graphic' works best), then 3 to 5 text slides, one per tool, then ONE "
+        "prompt slide with a copy-paste prompt this person can use in ChatGPT, Claude or Gemini today, then the cta.\n"
+        "On each tool slide: kicker = the exact tool name from the list below, title = what it helps this person "
+        "do (max 60 characters), body = one specific, everyday way they would use it (max 200 characters).\n"
+        "Only use tools from this list, and only for what the list says they do. Never mention prices, plans or "
+        "whether something is free, never invent features, and never claim Tessa tested or uses a tool. "
+        "In the caption, add a line saying to check each tool's current pricing and privacy settings.\n"
+        f"Allowed tools:\n{tools}"
+    )
+
+
+def generate(pillar: str, recent_topics: list[str], date_label: str, persona: str | None = None) -> dict:
     client = anthropic.Anthropic()
     recent = "\n".join(f"- {t}" for t in recent_topics[-60:]) or "- (none yet)"
     user = (
         f"Write the carousel for {date_label}.\n"
         f"Today's content pillar: {pillar}\n\n"
-        f"Recently posted (do not repeat):\n{recent}"
+        + (roundup_brief(persona) + "\n\n" if persona else "")
+        + f"Recently posted (do not repeat):\n{recent}"
     )
+    covers = "\n".join(f"   - {m}: {COVERS[m]}" for m in COVER_MOODS)
+    system = SYSTEM.format(covers=covers)
     last_err = None
     for attempt in range(3):
         msgs = [{"role": "user", "content": user}]
@@ -143,7 +226,7 @@ def generate(pillar: str, recent_topics: list[str], date_label: str) -> dict:
             max_tokens=16000,
             betas=["server-side-fallback-2026-07-01"],
             fallbacks="default",
-            system=SYSTEM,
+            system=system,
             messages=msgs,
             output_config={"effort": "medium", "format": {"type": "json_schema", "schema": SCHEMA}},
         )
@@ -155,7 +238,7 @@ def generate(pillar: str, recent_topics: list[str], date_label: str) -> dict:
             continue
         text = next(b.text for b in resp.content if b.type == "text")
         try:
-            return validate(json.loads(text))
+            return validate(json.loads(text), roundup=persona is not None)
         except (InvalidPost, json.JSONDecodeError) as e:
             last_err = str(e)
     raise InvalidPost(f"gave up after 3 attempts: {last_err}")
