@@ -1,0 +1,28 @@
+name: Threads - refresh token
+
+on:
+  schedule:
+    - cron: "0 10 * * 1"   # every Monday; a Threads token lasts 60 days
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: pip install requests
+      - name: Refresh and store the new token
+        env:
+          THREADS_ACCESS_TOKEN: ${{ secrets.THREADS_ACCESS_TOKEN }}
+          GH_TOKEN: ${{ secrets.GH_SECRETS_TOKEN }}
+        run: |
+          NEW=$(python scripts/threads_refresh_token.py)
+          [ -n "$NEW" ] || { echo "::error::No token returned"; exit 1; }
+          echo "::add-mask::$NEW"
+          gh secret set THREADS_ACCESS_TOKEN --body "$NEW" --repo "${{ github.repository }}"
