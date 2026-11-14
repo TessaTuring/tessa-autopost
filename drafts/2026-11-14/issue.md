@@ -2,7 +2,7 @@
 
 To skip it, just **close this issue**. Do nothing and it posts automatically.
 
-**Topic:** Plan a holiday dinner with 3 AI prompts: menu, shopping list and cook-day timeline
+**Topic:** Holiday dinner hosting plan in 3 prompts: menu, shopping list by store section, and a cook-day timeline
 
 <img src="https://raw.githubusercontent.com/TessaTuring/tessa-autopost/main/drafts/2026-11-14/01.jpg" width="260">
 <img src="https://raw.githubusercontent.com/TessaTuring/tessa-autopost/main/drafts/2026-11-14/02.jpg" width="260">
@@ -15,15 +15,17 @@ To skip it, just **close this issue**. Do nothing and it posts automatically.
 **Caption:**
 
 ```
-Hosting dinner this season? Let AI do the logistics 🍽️
+Hosting this year? The cooking is the easy part. The planning is what gets you. 🍽️
 
-Prompt 1 builds a menu that fits your oven and your time.
-Prompt 2 turns it into one shopping list, grouped by aisle.
-Prompt 3 gives you a cook-day timeline so nothing fights for the oven.
-Works in free ChatGPT, Claude or Gemini.
+Three prompts, one chat:
+1. A menu that fits your guests and your oven
+2. A shopping list sorted by store section
+3. A cook-day timeline that works backwards from dinner time
 
-Save this so it's ready when the guest list lands 📌
-More shortcuts in my free guide, 10 AI Shortcuts. Link in bio.
+Bonus: ask which dishes a guest could bring, and you have your delegation list.
 
-#mealplanning #holidayhosting #friendsgiving #aiprompts #chatgpttips
+Save this for when the planning starts.
+More shortcuts like this are in my free guide, 10 AI Shortcuts. Link in bio.
+
+#holidayhosting #mealplanning #aiprompts #chatgpttips #thanksgivingprep
 ```
