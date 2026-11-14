@@ -2,7 +2,7 @@
 
 To skip it, just **close this issue**. Do nothing and it posts automatically.
 
-**Topic:** Holiday gift planning with AI: idea shortlist, budget split and card messages
+**Topic:** Plan a holiday dinner with 3 AI prompts: menu, shopping list and cook-day timeline
 
 <img src="https://raw.githubusercontent.com/TessaTuring/tessa-autopost/main/drafts/2026-11-14/01.jpg" width="260">
 <img src="https://raw.githubusercontent.com/TessaTuring/tessa-autopost/main/drafts/2026-11-14/02.jpg" width="260">
@@ -15,16 +15,15 @@ To skip it, just **close this issue**. Do nothing and it posts automatically.
 **Caption:**
 
 ```
-Gift season is coming and your brain is already blank. 🎁
+Hosting dinner this season? Let AI do the logistics 🍽️
 
-These 3 prompts do the heavy lifting:
-1. A shortlist of ideas that fit the person, not just the price.
-2. A fair budget split across your whole list.
-3. Card messages that sound like you wrote them.
+Prompt 1 builds a menu that fits your oven and your time.
+Prompt 2 turns it into one shopping list, grouped by aisle.
+Prompt 3 gives you a cook-day timeline so nothing fights for the oven.
+Works in free ChatGPT, Claude or Gemini.
 
-Save this so it is ready when the shopping rush hits. 📌
+Save this so it's ready when the guest list lands 📌
+More shortcuts in my free guide, 10 AI Shortcuts. Link in bio.
 
-Want more shortcuts like this? My free guide, 10 AI Shortcuts, is in my bio.
-
-#giftideas #holidayplanning #chatgpttips #aishortcuts #christmasshopping
+#mealplanning #holidayhosting #friendsgiving #aiprompts #chatgpttips
 ```
