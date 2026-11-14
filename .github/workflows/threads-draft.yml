@@ -1,0 +1,66 @@
+name: Threads - draft tomorrow's post
+
+on:
+  schedule:
+    - cron: "30 23 * * *"   # 6:30 PM Eastern (7:30 PM during daylight time)
+  workflow_dispatch:
+    inputs:
+      date:
+        description: "Date to draft (YYYY-MM-DD). Leave empty for tomorrow."
+        required: false
+
+permissions:
+  contents: write
+  issues: write
+
+concurrency:
+  group: tessa-content
+  cancel-in-progress: false
+
+jobs:
+  draft:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - run: pip install -r requirements.txt
+
+      - name: Pick the date
+        id: day
+        run: |
+          if [ -n "${{ github.event.inputs.date }}" ]; then
+            echo "day=${{ github.event.inputs.date }}" >> "$GITHUB_OUTPUT"
+          else
+            echo "day=$(TZ=America/New_York date -d tomorrow +%F)" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: Write the Threads post
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+        run: python scripts/threads_draft.py "${{ steps.day.outputs.day }}"
+
+      - name: Save draft to the repo
+        run: |
+          git config user.name "tessa-bot"
+          git config user.email "tessa-bot@users.noreply.github.com"
+          git add threads content/threads_history.json
+          git diff --cached --quiet || git commit -m "Threads draft for ${{ steps.day.outputs.day }}"
+          git push
+
+      - name: Open the review issue
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          DAY="${{ steps.day.outputs.day }}"
+          TITLE="Threads for $DAY"
+          gh label create threads --color 000000 --force >/dev/null
+          gh label create scheduled --color FBCA04 --force >/dev/null
+          gh label create posted --color 0E8A16 --force >/dev/null
+          EXISTING=$(gh issue list --state all --search "in:title \"$TITLE\"" --json title --jq ".[] | select(.title==\"$TITLE\") | .title")
+          if [ -z "$EXISTING" ]; then
+            gh issue create --title "$TITLE" --label threads --label scheduled --body-file "threads/$DAY.md"
+          fi
