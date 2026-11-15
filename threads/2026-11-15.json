@@ -1,6 +1,6 @@
 {
   "date": "2026-11-15",
-  "topic": "Ten-minute week review",
-  "text": "Sunday evening is a good time for a ten-minute review of the week, and an AI can ask the questions for you:\n\nAsk me 7 questions, one at a time, about what went well this week and what to change next week. Summarize my answers at the end.\n\nType fast and skip the polish, since nobody else reads it. What's one thing from this week you'd happily repeat?",
+  "topic": "School dates into your calendar",
+  "text": "When the school sends the year's dates as a PDF or a photo, ChatGPT or Claude can turn it into a calendar file you import in one go:\n\nTurn every date in this into an .ics calendar file. Use [time zone], add a reminder the evening before each one, and list any dates you weren't sure about.\n\nCheck the unsure ones, then open the file on your phone. Which schedule would you hand off first?",
   "source": "library"
 }
