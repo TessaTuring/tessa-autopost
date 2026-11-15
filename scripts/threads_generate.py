@@ -72,6 +72,15 @@ or Gemini, with [square brackets] for the parts the reader fills in, then one or
 practical tip for using it, then the ending required for the day. The prompt must be genuinely useful,
 specific and correct.
 
+VALUE BAR (most important): every post must teach something a regular person would NOT think of on
+their own. "Ask AI for dinner ideas" or "ask AI to summarize this" is too basic and gets rejected.
+Each post needs one non-obvious move, for example: uploading a photo or screenshot (a fridge, an
+error code, a statement, a school schedule), having the AI make a real file (an .ics calendar file,
+a spreadsheet formula, a Gmail search), voice mode (rehearsing a hard conversation, talking a reply
+out loud), asking the AI to ask questions first, to argue against a plan, to grade a draft against a
+standard it writes first, to catch what's vague or missing, or saving details once in custom
+instructions. Keep it understandable for non-techies, and only describe features that really exist.
+
 Hard rules:
 - {MIN_CHARS} to {MAX_CHARS} characters in total, including line breaks.
 - No emoji, no hashtags, no links, no em or en dashes.
