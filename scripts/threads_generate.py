@@ -21,23 +21,12 @@ FREE_GUIDE = (
     "10 Use what's in the fridge."
 )
 PAID_PACK = (
-    "the $7 50 AI Shortcuts pack (call it 'my 50 AI Shortcuts pack' or 'my $7 shortcuts pack'; never "
-    "use its full title or any time-saving claim). Sections and prompts: Email and messages (1 Reply to "
-    "anything fast, 2 Say no without guilt, 3 Summarize a long thread, 4 Write the awkward follow-up, "
-    "5 Fix my tone, 6 Ask for something clearly, 7 Turn notes into an update, 8 Calm down an angry email, "
-    "9 Thank-you note that isn't generic, 10 Inbox triage); Writing and content (11 Teach it your voice, "
-    "12 Beat the blank page, 13 Shorten anything, 14 One idea, five posts, 15 Better headlines, "
-    "16 Explain it simply, 17 Edit like a pro, 18 Bio in every length, 19 Product description, "
-    "20 Content ideas for a month); Planning and productivity (21 Brain dump to plan, 22 Plan my day "
-    "realistically, 23 Break down a big project, 24 Find my top priority, 25 Run a better meeting, "
-    "26 Meeting notes to action items, 27 Weekly review, 28 Checklist for anything I repeat, "
-    "29 Stop procrastinating, 30 Plan a goal backwards); Research and learning (31 Explain it like a "
-    "tutor, 32 Summarize anything long, 33 Compare options, 34 Learn a skill in 30 days, 35 Prepare for "
-    "a conversation, 36 Find the holes in my idea, 37 Turn notes into flashcards, 38 Decode jargon, "
-    "39 Get the other side, 40 Research starting point); Life admin and money (41 Meal plan and grocery "
-    "list, 42 Use what's in the fridge, 43 Simple monthly budget, 44 Spot subscriptions to cancel, "
-    "45 Write a complaint, 46 Negotiate a bill, 47 Plan a trip, 48 Cleaning routine, 49 Decode a "
-    "confusing letter or bill, 50 Gift ideas)."
+    "the $9 AI Made Simple 7-day guided workbook (call it 'my AI Made Simple workbook' or 'my 7-day "
+    "workbook'; large print, fill it in on screen or print it; never make results claims). What's inside: "
+    "Day 1 getting set up and the privacy setting, Day 2 how to ask plus four phrases that fix any answer, "
+    "Day 3 letters and forms explained, Day 4 bills and forgotten subscriptions, Day 5 notes, group chats "
+    "and family moments, Day 6 appointment prep and learning gadgets step by step, Day 7 second opinions "
+    "on strange messages and double-checking answers. Also a printable cheat sheet and a prompt notebook."
 )
 # Monday = 0. Offer days point softly to a product in the last sentence; growth days never do.
 OFFERS = {
@@ -45,12 +34,10 @@ OFFERS = {
        "'my profile'. If you name a shortcut number, it must match this list.",
     3: "Free-guide day. In the last sentence, softly point to " + FREE_GUIDE + " Say it's in or linked from "
        "'my profile'. If you name a shortcut number, it must match this list.",
-    2: "Paid-pack day. In the last sentence, softly point to " + PAID_PACK + " Name ONE real prompt or "
-       "section from the list that fits today's post, mention the $7 price, and say it's in or linked "
-       "from 'my profile'.",
-    4: "Paid-pack day. In the last sentence, softly point to " + PAID_PACK + " Name ONE real prompt or "
-       "section from the list that fits today's post, mention the $7 price, and say it's in or linked "
-       "from 'my profile'.",
+    2: "Workbook day. In the last sentence, softly point to " + PAID_PACK + " Name the ONE day or part that "
+       "fits today's post, mention the $9 price, and say it's in or linked from 'my profile'.",
+    4: "Workbook day. In the last sentence, softly point to " + PAID_PACK + " Name the ONE day or part that "
+       "fits today's post, mention the $9 price, and say it's in or linked from 'my profile'.",
 }
 NO_OFFER = (
     "Growth day. Do not mention any guide, pack, product, profile or link. Write it so a reader wants to "
@@ -147,10 +134,10 @@ def validate(post: dict, weekday: int) -> dict:
     if weekday in OFFERS:
         if "profile" not in low:
             raise InvalidPost("today the post must softly point to the offer in 'my profile'")
-        if weekday in (2, 4) and "$7" not in text:
-            raise InvalidPost("today the post must mention the $7 pack")
+        if weekday in (2, 4) and "$9" not in text:
+            raise InvalidPost("today the post must mention the $9 workbook")
     else:
-        if re.search(r"\bprofile\b|\bguide\b|\b(?:my|the|shortcuts|\$7) pack\b|\$\d", low):
+        if re.search(r"\bprofile\b|\bguide\b|\b(?:my|the|shortcuts|\$7) pack\b|\bworkbook\b|\$\d", low):
             raise InvalidPost("growth posts must not mention any product, guide or profile link")
         if not text.endswith("?") or text.count("?") > 2:
             raise InvalidPost("a growth post must end with one specific question")

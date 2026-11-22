@@ -27,7 +27,8 @@ def main() -> None:
     if day.weekday() == 4:  # Fridays: AI tool picks for one kind of person, rotating weekly
         pillar = TOOLS_PILLAR
         persona = PERSONAS[((day - dt.date(2026, 11, 20)).days // 7) % len(PERSONAS)]
-    post = generate(pillar, [h["topic"] for h in history], day.strftime("%A, %B %d"), persona)
+    post = generate(pillar, [h["topic"] for h in history], day.strftime("%A, %B %d"), persona,
+                    workbook=day.weekday() in (2, 4))  # Wed and Fri mention the $9 workbook
 
     # Avoid reusing the same cover photo two days in a row.
     mood = post["cover_mood"]

@@ -77,6 +77,11 @@ PERSONAS = [
     "people working their last few years before retirement",
 ]
 TOOLS_PILLAR = "AI tool picks for one kind of person"
+WORKBOOK_LINE = (
+    "Workbook day: in the caption, right after the free-guide line, add ONE short, friendly line saying the "
+    "AI Made Simple 7-day guided workbook is also linked in bio for anyone who wants to practice step by step. "
+    "Keep slides and the cta slide unchanged, and never make results claims about it."
+)
 
 SYSTEM = """You write Instagram carousels for Tessa Turing, whose tagline is "Plain-English AI help for
 real life." Her audience is grown-ups, mostly 45 and older, who feel a step behind on AI or didn't
@@ -254,13 +259,15 @@ def roundup_brief(persona: str) -> str:
     )
 
 
-def generate(pillar: str, recent_topics: list[str], date_label: str, persona: str | None = None) -> dict:
+def generate(pillar: str, recent_topics: list[str], date_label: str, persona: str | None = None,
+             workbook: bool = False) -> dict:
     client = anthropic.Anthropic()
     recent = "\n".join(f"- {t}" for t in recent_topics[-60:]) or "- (none yet)"
     user = (
         f"Write the carousel for {date_label}.\n"
         f"Today's content pillar: {pillar}\n\n"
         + (roundup_brief(persona) + "\n\n" if persona else "")
+        + (WORKBOOK_LINE + "\n\n" if workbook else "")
         + f"Recently posted (do not repeat):\n{recent}"
     )
     covers = "\n".join(f"   - {m}: {COVERS[m]}" for m in COVER_MOODS)
