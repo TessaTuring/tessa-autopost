@@ -10,13 +10,13 @@ MODEL = "claude-opus-5-5"
 
 # Content pillars rotate by weekday (Monday = 0) so the feed stays varied.
 PILLARS = [
-    "Email and messages",
-    "Planning and productivity",
-    "Writing and content",
-    "Life admin and money (budgets, bills, subscriptions; general tips only, never financial advice)",
-    "Research and learning",
-    "Home and everyday life (meals, cleaning, trips, gifts)",
-    "Weekly reset (reviews, routines, planning the week ahead)",
+    "Email, texts and staying in touch (replies, family group chats, thank-you notes)",
+    "Getting started with AI (where to find it, how to ask, the AI already on your phone)",
+    "Letters, forms and paperwork made plain (general help only, never legal or financial advice)",
+    "Money and household admin (bills, budgets, subscriptions; general tips only, never financial advice)",
+    "Learning something new (tech help, hobbies, getting ready for appointments)",
+    "Home, family and everyday life (meals, trips, gifts, grandkids, celebrations)",
+    "Staying safe and confident with AI (suspicious messages, privacy, double-checking answers)",
 ]
 
 # Cover options. Photo covers are candid, medium-wide shots in a bright, modern work-from-home
@@ -58,31 +58,44 @@ TOOLS = {
     "Motion": "AI planner that schedules your tasks into your calendar",
     "ElevenLabs": "AI voice tool for voiceovers and reading text aloud",
     "Khanmigo": "Khan Academy's AI tutor and teaching assistant",
+    "Meta AI": "Meta's AI assistant, built into WhatsApp, Messenger, Facebook and Instagram",
+    "Google Lens": "point your phone camera at something (a plant, a label, a sign) to identify, translate or search it",
+    "Be My Eyes": "free app whose AI describes what your phone camera sees, made for people who are blind or have low vision",
 }
 PERSONAS = [
-    "stay-at-home parents",
-    "small business owners",
-    "remote employees",
-    "college students",
-    "teachers",
-    "freelancers",
-    "job seekers",
-    "people with a side hustle",
-    "new managers",
-    "retirees and anyone new to AI",
-    "busy caregivers",
-    "real estate agents",
+    "people over 50 trying AI for the first time",
+    "grandparents",
+    "people caring for an aging parent",
+    "retirees",
+    "empty nesters",
+    "small business owners over 50",
+    "people who mostly use a phone and no computer",
+    "volunteers and club organizers",
+    "people planning their retirement years",
+    "people who run the household paperwork",
+    "people with low vision or tired eyes",
+    "people working their last few years before retirement",
 ]
 TOOLS_PILLAR = "AI tool picks for one kind of person"
 
-SYSTEM = """You write Instagram carousels for Tessa Turing, a creator whose tagline is
-"I find the AI shortcuts so you don't have to." Her audience is busy everyday people (not
-techies) who want copy-paste AI prompts that save time. Her voice is warm, clear, a little
-dry, never hypey.
+SYSTEM = """You write Instagram carousels for Tessa Turing, whose tagline is "Plain-English AI help for
+real life." Her audience is grown-ups, mostly 45 and older, who feel a step behind on AI or didn't
+grow up with this kind of tech: parents of grown kids, grandparents, people caring for an aging
+parent, retirees and people in the later part of their careers. Their days are full of family, home,
+paperwork, appointments and money admin. Her voice is warm, patient and clear, like a friend who
+explains it once, kindly, with no jargon. Never talk down to the reader, and never treat age as a
+problem or a joke.
 
-Every carousel teaches ONE practical, specific shortcut or a tight set of related prompts that
-work in ChatGPT, Claude or Gemini (free versions). The reader should be able to copy a prompt
-from the slide and use it in under a minute.
+Every carousel teaches ONE useful trick a beginner would not think of on their own, explained so a
+first-timer can follow it. Too basic ("ask AI for dinner ideas") gets rejected; good ones use a
+non-obvious move such as uploading a photo or screenshot, using the microphone to talk, asking the AI
+to ask questions first, or asking it to flag what to double-check. Use free tools people already
+have: ChatGPT, Claude, Gemini, or Meta AI (already inside WhatsApp and Messenger). Name ChatGPT first
+when naming one. When a step involves the app itself (where to tap to upload a photo or use the
+microphone), say it plainly in one short line. The reader should be able to copy a prompt from the
+slide and use it in under a minute. Remind readers to keep account numbers, passwords and ID numbers
+out of chats whenever it fits. For anything about suspicious messages, AI is only a second opinion:
+always tell readers to contact the company using the number on their card or its official website.
 
 Structure (5 to 8 slides total):
 1. One "cover" slide: a scroll-stopping hook title (max 55 characters) and a short subtitle
