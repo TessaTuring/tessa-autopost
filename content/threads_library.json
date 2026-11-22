@@ -6,10 +6,58 @@
     "text": "For the reply you keep putting off, tap the microphone and talk through your answer, ums and all. Then paste the email and your ramble into ChatGPT or Claude:\n\nTurn my notes into a reply to this email. Keep my wording where it works, cut the rest, under 120 words. Email: [paste] My notes: [paste]\n\nIt sounds like you because most of it is you. Shortcut 2 in my free guide is built for fast replies, linked in my profile."
   },
   {
+    "weekday": 1,
+    "type": "value",
+    "topic": "Gmail search codes",
+    "text": "Gmail has search codes that can find almost any email, and AI can write them for you. Describe what you're after:\n\nWrite a Gmail search that finds [emails from the school with attachments from the last 3 months]. Explain each part in a few words.\n\nPaste it into the search bar, then click Create filter so those emails get a label automatically from now on. Which email do you always struggle to find?"
+  },
+  {
+    "weekday": 2,
+    "type": "paid",
+    "topic": "Your voice, saved",
+    "text": "Paste three things you've written into ChatGPT or Claude and ask:\n\nDescribe my writing style as 6 specific rules, with an example of each from my samples.\n\nSave those rules in the app's custom instructions or in a project, and every draft starts out sounding like you. Prompt 11, Teach it your voice, goes further, and it's in my $7 shortcuts pack in my profile."
+  },
+  {
+    "weekday": 3,
+    "type": "free",
+    "topic": "Subscription price creep",
+    "text": "Upload screenshots of three months of bank or card statements, with the account numbers covered, and ask:\n\nFind every recurring charge, including yearly ones. Flag any that went up in price across these months and give me the total yearly cost.\n\nSmall price increases are easy to miss one month at a time. Shortcut 9 in my free guide spots subscriptions to cancel, linked in my profile."
+  },
+  {
+    "weekday": 4,
+    "type": "paid",
+    "topic": "How it could fail",
+    "text": "Before you put money into a new idea, like a side business or a course, ask the AI to find the weak spots:\n\nHere's my idea: [describe]. Give me the 5 most likely reasons it fails, ranked, and a cheap test for each that I could run this month.\n\nRun the cheapest test first. Prompt 36, Find the holes in my idea, is in my $7 shortcuts pack in my profile."
+  },
+  {
+    "weekday": 5,
+    "type": "value",
+    "topic": "Rehearse it out loud",
+    "text": "Before a hard conversation with a landlord or a manager, rehearse it out loud. Open voice mode in ChatGPT and say:\n\nPlay [person]. I'm going to ask for [what I want]. Push back the way they realistically would. After 5 back-and-forths, step out of character and tell me where I sounded unsure.\n\nRun it twice and the real one feels familiar. Who would you most want to practice with?"
+  },
+  {
+    "weekday": 6,
+    "type": "value",
+    "topic": "School dates into your calendar",
+    "text": "When the school sends the year's dates as a PDF or a photo, ChatGPT or Claude can turn it into a calendar file you import in one go:\n\nTurn every date in this into an .ics calendar file. Use [time zone], add a reminder the evening before each one, and list any dates you weren't sure about.\n\nCheck the unsure ones, then open the file on your phone. Which schedule would you hand off first?"
+  },
+  {
+    "weekday": 6,
+    "type": "value",
+    "topic": "Ask me first",
+    "text": "Adding one line to the end of almost any request makes the answer fit your life much better:\n\nBefore you answer, ask me questions one at a time until you have what you need. Keep it to 5 questions at most.\n\nIt helps most with meal plans and trip plans, where the first answer usually comes out generic. What's a request you'd try this on first?"
+  },
+  {
     "weekday": 0,
     "type": "free",
-    "topic": "Catch the loose ends",
-    "text": "After a video call, paste the transcript into any AI assistant and ask it to catch the loose ends people agreed to without pinning down:\n\nFrom this transcript, list every action item with an owner and a date. Then list anything agreed vaguely that needs a follow-up question: [paste]\n\nSend those questions the same day while everyone remembers. Shortcut 8 in my free guide covers meeting notes, linked in my profile."
+    "topic": "Screenshots of the group chat",
+    "text": "When the family group chat has eighty messages you missed, take a few screenshots of them, open ChatGPT, tap the plus button to add the pictures, and ask:\n\nSummarize these messages in a few lines. List any plans, dates or questions that need an answer from me.\n\nScreenshots work in any chat app. Shortcut 4 in my free guide, Summarize a long thread, is linked in my profile."
+  },
+  {
+    "weekday": 0,
+    "type": "free",
+    "topic": "Every question answered",
+    "text": "When an email asks you five different things, it's easy to answer three and miss two. Paste it into ChatGPT with this:\n\nList every question this email asks me. Then write a short, friendly reply that answers each one using my notes. Email: [paste] My notes: [paste]\n\nYour notes can be quick and messy. Shortcut 2 in my free guide, Reply to anything fast, is linked in my profile."
   },
   {
     "weekday": 0,
@@ -20,62 +68,56 @@
   {
     "weekday": 0,
     "type": "free",
-    "topic": "What you're forgetting",
-    "text": "On Monday morning, open voice mode and talk through everything on your mind for the week. Then ask:\n\nTurn what I said into a plan for this week with a first step for each item. Then tell me what I'm likely forgetting that usually comes with tasks like these.\n\nThat last line catches things like booking the dog sitter for the trip you just planned. The full brain dump prompt is shortcut 6 in my free guide, linked in my profile."
+    "topic": "The week, said out loud",
+    "text": "On Monday morning, open ChatGPT, tap the microphone and talk through everything on your mind for the week. Then ask:\n\nTurn what I said into a plan for this week with a first step for each item. Then tell me what I'm likely forgetting that usually comes with tasks like these.\n\nThat last line catches things like booking the dog sitter for a trip. Shortcut 6 in my free guide is linked in my profile."
   },
   {
     "weekday": 1,
     "type": "value",
-    "topic": "Gmail search codes",
-    "text": "Gmail has search codes that can find almost any email, and AI can write them for you. Describe what you're after:\n\nWrite a Gmail search that finds [emails from the school with attachments from the last 3 months]. Explain each part in a few words.\n\nPaste it into the search bar, then click Create filter so those emails get a label automatically from now on. Which email do you always struggle to find?"
+    "topic": "Already on your phone",
+    "text": "If you use WhatsApp, you may already have an AI assistant without downloading anything. In many countries there's now a colorful ring icon on the Chats screen, and tapping it opens Meta AI. Try this first:\n\nGive me 5 everyday ways you could help someone who runs a busy household, with one example question for each.\n\nThen ask it one of its own examples. Have you spotted that ring on your phone yet?"
   },
   {
     "weekday": 1,
     "type": "value",
-    "topic": "Let it write the prompt",
-    "text": "When you're unsure how to ask for something, have the AI write the prompt for you:\n\nI want help with [rough goal]. Write the best prompt for this, ask me for any details it needs, then run it once I answer.\n\nYou'll see which details make an answer good, and your next request gets sharper too. What's something you'd like help with but can't figure out how to ask?"
+    "topic": "Say it again, simpler",
+    "text": "The first answer an AI gives is only a starting point, and you can reply to it like a text. When an answer feels too technical, write back:\n\nSay that again in simpler words, with one example from everyday life. Keep it under 100 words.\n\nYou can keep going until it makes sense, and it never gets impatient. What's a topic you'd like explained this way?"
   },
   {
     "weekday": 1,
     "type": "value",
-    "topic": "The formula you need",
-    "text": "Spreadsheets get much easier when you describe what you want and let the AI write the formula. Tell it how your sheet is laid out:\n\nMy Google Sheet has dates in column A and amounts in column B. Write a formula that totals [everything spent this month] and explain it in one sentence.\n\nSay Excel if that's what you use. What would you start tracking if the formulas were easy?"
+    "topic": "What is this thing?",
+    "text": "For the mystery cable in the drawer or the part that snapped off the dishwasher, open ChatGPT, tap the plus button, take a photo and ask:\n\nWhat is this, what is it usually called, and what should I search for to buy a replacement? Tell me which details to check first, like a model number.\n\nCheck sizes before ordering. What's the strangest thing in your junk drawer?"
   },
   {
     "weekday": 1,
     "type": "value",
-    "topic": "Grade it first",
-    "text": "For anything that matters, like a cover letter or a big email, ask the AI to define what good looks like before it touches your draft:\n\nList 5 things a great [cover letter for this job] does. Then score my draft against each one and rewrite only the weakest part: [paste job ad] [paste draft]\n\nYou find out what to fix and keep most of your own words. What would you want graded first?"
+    "topic": "Talk, then listen",
+    "text": "If typing on a phone feels slow, tap the microphone in ChatGPT and talk. To make it easy to follow along, start with this:\n\nKeep your answers short and simple, ask me one question at a time, and wait for my answer before moving on.\n\nChatGPT can also read any answer out loud: press and hold it and choose Read aloud. Do you prefer typing or talking to your phone?"
   },
   {
     "weekday": 2,
     "type": "paid",
-    "topic": "Your voice, saved",
-    "text": "Paste three things you've written into ChatGPT or Claude and ask:\n\nDescribe my writing style as 6 specific rules, with an example of each from my samples.\n\nSave those rules in the app's custom instructions or in a project, and every draft starts out sounding like you. Prompt 11, Teach it your voice, goes further, and it's in my $7 shortcuts pack in my profile."
+    "topic": "Decode the letter",
+    "text": "For a letter full of official wording, take a photo with the account numbers covered, add it in ChatGPT with the plus button, and ask:\n\nWhat is this letter asking me to do, by what date, and what happens if I do nothing? Explain it in plain English.\n\nCall the number printed on the letter if anything is unclear. That's prompt 49 in my $7 shortcuts pack, linked in my profile."
   },
   {
     "weekday": 2,
     "type": "paid",
-    "topic": "Edits you choose",
-    "text": "When you want help with something you wrote, ask for the edits as a list so you stay in charge of your own words:\n\nEdit this like a professional editor. Give me a numbered list of changes with a reason for each, and leave the text itself as it is: [paste]\n\nThen accept the ones you agree with. That's prompt 17, Edit like a pro, from my $7 shortcuts pack, linked in my profile."
+    "topic": "One specific detail",
+    "text": "A thank-you note feels personal when it mentions one specific thing. Give the AI that detail:\n\nWrite a thank-you note to [person] for [gift or favor]. Mention [one specific detail], keep it to 4 sentences, warm and a little playful.\n\nThen copy it in your own handwriting. Prompt 9, Thank-you note that isn't generic, is in my $7 shortcuts pack in my profile."
   },
   {
     "weekday": 2,
     "type": "paid",
-    "topic": "The questions people ask you",
-    "text": "The questions people already ask you make great posts. Paste a list of them into any AI assistant and try:\n\nHere are questions people often ask me about [topic]: [paste]. Turn them into 20 post ideas for [platform], each with a hook line and the main point.\n\nAsk it to group them by week and the month is planned. Prompt 20, Content ideas for a month, is in my $7 shortcuts pack in my profile."
+    "topic": "The complaint with a deadline",
+    "text": "A complaint gets a faster answer when it asks for one clear thing by a clear date. Try this:\n\nWrite a calm complaint to [company] about [problem]. Include the order number, dates, what I've already tried, and exactly what I'm asking for by [date].\n\nKeep a copy of what you send. Prompt 45, Write a complaint, is in my $7 shortcuts pack, linked in my profile."
   },
   {
     "weekday": 2,
     "type": "paid",
-    "topic": "Ask the reader",
-    "text": "Once you have a handful of headline options, ask the AI to judge them as your reader would:\n\nYou're [describe my reader]. Rank these headlines by which you'd click, and give one line on why for your top pick and your last pick: [paste]\n\nIt catches the ones that only make sense to you. Prompt 15, Better headlines, is in my $7 shortcuts pack, linked in my profile."
-  },
-  {
-    "weekday": 3,
-    "type": "free",
-    "topic": "Subscription price creep",
-    "text": "Upload screenshots of three months of bank or card statements, with the account numbers covered, and ask:\n\nFind every recurring charge, including yearly ones. Flag any that went up in price across these months and give me the total yearly cost.\n\nSmall price increases are easy to miss one month at a time. Shortcut 9 in my free guide spots subscriptions to cancel, linked in my profile."
+    "topic": "If they say no",
+    "text": "Before you call about the phone or internet bill, ask for the script plus a plan for pushback:\n\nWrite a short, friendly script for asking [company] for a lower rate. I've been a customer for [time] and pay [amount]. Add 2 polite replies for if they say no.\n\nHave it on screen during the call. Prompt 46, Negotiate a bill, is in my $7 shortcuts pack in my profile."
   },
   {
     "weekday": 3,
@@ -96,10 +138,22 @@
     "text": "Before filling in a long form for school or benefits, upload a blank copy and ask:\n\nWhich parts of this form apply to someone in [my situation]? List the documents and numbers I'll need before I start, and explain any confusing questions in plain English.\n\nGather everything first and it takes one sitting. Keep your real ID numbers out of the chat. My free guide has 10 more shortcuts, linked in my profile."
   },
   {
+    "weekday": 3,
+    "type": "free",
+    "topic": "Downsizing, step by step",
+    "text": "Helping a parent move or clearing out a family home feels endless until it's in order. Talk or type everything that needs doing, then ask:\n\nTurn this into a step-by-step plan, starting 8 weeks before [moving date]. Group it by week and flag anything that needs a phone call or a booking: [list]\n\nPrint it and tick things off. Shortcut 6 in my free guide, Brain dump to plan, is linked in my profile."
+  },
+  {
     "weekday": 4,
     "type": "paid",
-    "topic": "How it could fail",
-    "text": "Before you put money into a new idea, like a side business or a course, ask the AI to find the weak spots:\n\nHere's my idea: [describe]. Give me the 5 most likely reasons it fails, ranked, and a cheap test for each that I could run this month.\n\nRun the cheapest test first. Prompt 36, Find the holes in my idea, is in my $7 shortcuts pack in my profile."
+    "topic": "Appointment prep",
+    "text": "Appointments go by fast. Before the next one, give the AI your notes and ask:\n\nHere's what I want to discuss with my [doctor]: [symptoms, dates, medications]. Organize it into a one-page summary and write the 5 questions I should ask.\n\nBring it on your phone so nothing gets forgotten. Prompt 35, Prepare for a conversation, works for any appointment, and it's in my $7 shortcuts pack in my profile."
+  },
+  {
+    "weekday": 4,
+    "type": "paid",
+    "topic": "One step, then next",
+    "text": "To finally learn the smart TV, the new phone or a spreadsheet, ask the AI to slow down to your pace:\n\nTeach me how to [task] on my [device] as a complete beginner. Give me one step at a time and wait until I type next before showing the next step.\n\nThat keeps the screen calm. Prompt 31, Explain it like a tutor, is in my $7 shortcuts pack in my profile."
   },
   {
     "weekday": 4,
@@ -110,20 +164,14 @@
   {
     "weekday": 4,
     "type": "paid",
-    "topic": "A tutor who knows your job",
-    "text": "Ask an AI to explain a hard topic with examples from your own work and it sticks much better:\n\nExplain [topic] like a patient tutor. I work as a [job], so use examples from that. After each step, check I understood with one question.\n\nIt's great for things like interest rates or spreadsheets. Prompt 31, Explain it like a tutor, is in my $7 shortcuts pack in my profile."
-  },
-  {
-    "weekday": 4,
-    "type": "paid",
-    "topic": "Appointment prep",
-    "text": "Appointments go by fast. Before the next one, give the AI your notes and ask:\n\nHere's what I want to discuss with my [doctor]: [symptoms, dates, medications]. Organize it into a one-page summary and write the 5 questions I should ask.\n\nBring it on your phone so nothing gets forgotten. Prompt 35, Prepare for a conversation, works for any appointment, and it's in my $7 shortcuts pack in my profile."
+    "topic": "A trip with rest built in",
+    "text": "Ask for a trip plan that matches the pace you actually like:\n\nPlan [number] days in [place] for [who's going]. Keep it to 2 activities a day, add rest breaks, note where there's seating and how much walking each part involves.\n\nCheck opening hours before you go. Prompt 47, Plan a trip, is in my $7 shortcuts pack, linked in my profile."
   },
   {
     "weekday": 5,
     "type": "value",
-    "topic": "Rehearse it out loud",
-    "text": "Before a hard conversation with a landlord or a manager, rehearse it out loud. Open voice mode in ChatGPT and say:\n\nPlay [person]. I'm going to ask for [what I want]. Push back the way they realistically would. After 5 back-and-forths, step out of character and tell me where I sounded unsure.\n\nRun it twice and the real one feels familiar. Who would you most want to practice with?"
+    "topic": "The handwritten recipe card",
+    "text": "To save a handwritten recipe card, open ChatGPT, tap the plus button, take a photo of the card and ask:\n\nType out this recipe exactly as written. Then make a clean version with numbered steps, and mark any word you couldn't read.\n\nPrint copies for the family and keep the original safe. Whose handwriting would you most like to save?"
   },
   {
     "weekday": 5,
@@ -146,25 +194,25 @@
   {
     "weekday": 6,
     "type": "value",
-    "topic": "School dates into your calendar",
-    "text": "When the school sends the year's dates as a PDF or a photo, ChatGPT or Claude can turn it into a calendar file you import in one go:\n\nTurn every date in this into an .ics calendar file. Use [time zone], add a reminder the evening before each one, and list any dates you weren't sure about.\n\nCheck the unsure ones, then open the file on your phone. Which schedule would you hand off first?"
+    "topic": "A second opinion on a strange text",
+    "text": "When a text says your package is held or your account is locked, take a screenshot before tapping anything, add it in ChatGPT and ask:\n\nWhat signs in this message are common in scams, and how would the real company usually contact me about this?\n\nTreat it as a second opinion, then contact the company using the number on your card or its official website. Have you had one of these lately?"
   },
   {
     "weekday": 6,
     "type": "value",
-    "topic": "Ask me first",
-    "text": "Adding one line to the end of almost any request makes the answer fit your life much better:\n\nBefore you answer, ask me questions one at a time until you have what you need. Keep it to 5 questions at most.\n\nIt helps most with meal plans and trip plans, where the first answer usually comes out generic. What's a request you'd try this on first?"
+    "topic": "The training switch",
+    "text": "Most AI apps let you choose whether your chats help train future versions. In ChatGPT it's under Settings, then Data controls, called Improve the model for everyone. In Claude it's under Settings, then Privacy.\n\nSwitch it off if you'd like your chats kept out of training, and keep account numbers and passwords out of every chat either way. Did you know this setting existed?"
+  },
+  {
+    "weekday": 6,
+    "type": "value",
+    "topic": "Check the answer",
+    "text": "AI can sound completely sure and still get things wrong. After any answer that matters, send this:\n\nWhich parts of your answer are you least sure about? Tell me what I should double-check with an official source, and where to look.\n\nIt's a good habit for anything about money, health or the law. What would you always double-check?"
   },
   {
     "weekday": 6,
     "type": "value",
     "topic": "Tell it once",
     "text": "If you keep retyping the same details, like your budget or who you cook for, save them in the AI's settings once. ChatGPT calls it custom instructions and Claude calls it personal preferences. Write something like:\n\nI live in [place], cook for [people], avoid [foods], and like short answers with steps.\n\nEvery new chat starts with it. What detail do you find yourself repeating most?"
-  },
-  {
-    "weekday": 6,
-    "type": "value",
-    "topic": "Screenshot next week",
-    "text": "Take a screenshot of next week's calendar and upload it to any AI assistant with this:\n\nFind the problems in this week: double bookings, meetings with no travel time between them, early starts after late evenings, and days with no lunch break. Suggest the 2 changes that would help most.\n\nOn Sunday there's still time to move things. Which day next week already looks too full?"
   }
 ]
