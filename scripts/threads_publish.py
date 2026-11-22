@@ -1,6 +1,6 @@
 """Publish a drafted text-only post to Threads.
 
-Usage: python scripts/threads_publish.py YYYY-MM-DD
+Usage: python scripts/threads_publish.py YYYY-MM-DD [main|am|pm]
 Env:   THREADS_USER_ID, THREADS_ACCESS_TOKEN
 Prints the permalink of the published post.
 """
@@ -30,8 +30,9 @@ def call(method: str, path: str, **params) -> dict:
     return r.json()
 
 
-def publish(day: str) -> str:
-    post = json.loads((ROOT / "threads" / f"{day}.json").read_text())
+def publish(day: str, slot: str = "main") -> str:
+    name = f"{day}.json" if slot == "main" else f"{day}-{slot}.json"
+    post = json.loads((ROOT / "threads" / name).read_text())
     user = os.environ.get("THREADS_USER_ID", "").strip()
     if not user or user == "me":  # no ID stored: ask Threads whose token this is
         user = call("GET", "me", fields="id")["id"]
@@ -55,4 +56,4 @@ def publish(day: str) -> str:
 
 
 if __name__ == "__main__":
-    print(publish(sys.argv[1]))
+    print(publish(sys.argv[1], sys.argv[2] if len(sys.argv) > 2 else "main"))

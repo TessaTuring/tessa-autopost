@@ -45,6 +45,17 @@ NO_OFFER = (
     "in a few words."
 )
 
+# Extra daily slots (3 posts a day): a morning tip and an evening conversation starter. Neither sells.
+SLOT_BRIEFS = {
+    "am": NO_OFFER + " This is the MORNING post: a practical tip with a copy-paste prompt that suits the start "
+          "of someone's day. Use a different topic from today's main post.",
+    "pm": "EVENING post. This one ignores the usual SHAPE: no prompt, no tip. Write ONE or two short, warm "
+          "sentences that invite replies from this audience about their real life with phones, computers or AI "
+          "(a light question, a this-or-that, or what they'd love a hand with). No product, profile, guide or "
+          "link. 40 to 220 characters. End with a question mark.",
+}
+SHORT_MIN, SHORT_MAX = 40, 220
+
 SYSTEM = f"""You write short, text-only Threads posts for Tessa Turing (@tessa_turing), whose tagline is
 "Plain-English AI help for real life." Her audience is grown-ups, mostly 45 and older, who feel a step
 behind on AI or didn't grow up with this kind of tech: parents of grown kids, grandparents, people
@@ -121,17 +132,18 @@ class InvalidPost(Exception):
     pass
 
 
-def validate(post: dict, weekday: int) -> dict:
+def validate(post: dict, weekday: int, slot: str = "main") -> dict:
     text = re.sub(r"[ \t]+\n", "\n", post["text"].strip())
     text = re.sub(r"\n{3,}", "\n\n", text)
     for pat, label in TELLS:
         m = re.search(pat, text, re.I | re.M)
         if m:
             raise InvalidPost(f"it contains {label}: {m.group(0)!r}. Rewrite that part as one plain true statement")
-    if not MIN_CHARS <= len(text) <= MAX_CHARS:
-        raise InvalidPost(f"the post is {len(text)} characters; it must be {MIN_CHARS} to {MAX_CHARS}")
+    lo, hi = (SHORT_MIN, SHORT_MAX) if slot == "pm" else (MIN_CHARS, MAX_CHARS)
+    if not lo <= len(text) <= hi:
+        raise InvalidPost(f"the post is {len(text)} characters; it must be {lo} to {hi}")
     low = text.lower()
-    if weekday in OFFERS:
+    if weekday in OFFERS and slot == "main":
         if "profile" not in low:
             raise InvalidPost("today the post must softly point to the offer in 'my profile'")
         if weekday in (2, 4) and "$9" not in text:
@@ -146,13 +158,13 @@ def validate(post: dict, weekday: int) -> dict:
     return post
 
 
-def generate(weekday: int, recent_topics: list[str], date_label: str) -> dict:
+def generate(weekday: int, recent_topics: list[str], date_label: str, slot: str = "main") -> dict:
     client = anthropic.Anthropic()
     recent = "\n".join(f"- {t}" for t in recent_topics[-80:]) or "- (none yet)"
     user = (
         f"Write the Threads post for {date_label}.\n"
         f"Content pillar: {PILLARS[weekday]}\n"
-        f"{OFFERS.get(weekday, NO_OFFER)}\n\n"
+        f"{SLOT_BRIEFS[slot] if slot in SLOT_BRIEFS else OFFERS.get(weekday, NO_OFFER)}\n\n"
         f"Recently posted on Threads or Instagram (do not repeat):\n{recent}"
     )
     last_err = None
@@ -175,7 +187,7 @@ def generate(weekday: int, recent_topics: list[str], date_label: str) -> dict:
             continue
         text = next(b.text for b in resp.content if b.type == "text")
         try:
-            return validate(json.loads(text), weekday)
+            return validate(json.loads(text), weekday, slot)
         except (InvalidPost, json.JSONDecodeError) as e:
             last_err = str(e)
     raise InvalidPost(f"gave up after 4 attempts: {last_err}")

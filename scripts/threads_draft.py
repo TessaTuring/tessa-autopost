@@ -51,13 +51,36 @@ def main() -> None:
     history.append({"date": record["date"], "topic": record["topic"], "source": source})
     THREADS_HISTORY.write_text(json.dumps(history, indent=2, ensure_ascii=False) + "\n")
 
+    # Two extra posts a day: a morning tip and an evening conversation starter (written by Claude).
+    # If either fails, the main post still goes out.
+    extras = {}
+    for slot in ("am", "pm"):
+        try:
+            from threads_generate import generate
+
+            recent = [h["topic"] for h in history] + [h["topic"] for h in load_history()]
+            extra = generate(day.weekday(), recent, day.strftime("%A, %B %d"), slot=slot)
+            rec = {"date": day.isoformat(), "slot": slot, "topic": extra["topic"], "text": extra["text"],
+                   "source": "claude"}
+            (THREADS / f"{day.isoformat()}-{slot}.json").write_text(json.dumps(rec, indent=2, ensure_ascii=False) + "\n")
+            history.append({"date": rec["date"], "topic": rec["topic"], "source": f"claude-{slot}"})
+            extras[slot] = rec
+        except Exception as e:  # noqa: BLE001
+            print(f"::warning::Could not write the {slot} Threads post: {e}")
+    THREADS_HISTORY.write_text(json.dumps(history, indent=2, ensure_ascii=False) + "\n")
+
     origin = "from the reviewed library" if source == "library" else "written fresh by Claude"
-    (THREADS / f"{day.isoformat()}.md").write_text(
-        f"**Scheduled to post on Threads {day.strftime('%A, %B %d')} around 11 AM Eastern.**\n\n"
-        f"To skip it, just **close this issue**. Do nothing and it posts automatically.\n\n"
-        f"**Topic:** {post['topic']} ({origin})\n\n**Post** ({len(post['text'])} characters):\n\n"
-        f"```\n{post['text']}\n```\n"
-    )
+    parts = [
+        f"**Three Threads posts for {day.strftime('%A, %B %d')}** (times are Eastern).\n\n"
+        "To skip all of them, just **close this issue**. Do nothing and they post automatically.\n"
+    ]
+    if "am" in extras:
+        parts.append(f"### Around 8:30 AM: morning tip\n\n**Topic:** {extras['am']['topic']}\n\n```\n{extras['am']['text']}\n```\n")
+    parts.append(f"### Around 11 AM: main post\n\n**Topic:** {post['topic']} ({origin})\n\n"
+                 f"**Post** ({len(post['text'])} characters):\n\n```\n{post['text']}\n```\n")
+    if "pm" in extras:
+        parts.append(f"### Around 6 PM: evening question\n\n```\n{extras['pm']['text']}\n```\n")
+    (THREADS / f"{day.isoformat()}.md").write_text("\n".join(parts))
     print(f"Drafted Threads post for {day}: {post['topic']} ({source})")
 
 

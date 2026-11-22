@@ -55,6 +55,7 @@ def main() -> None:
         "cover_mood": mood,
         "caption": caption,
         "images": [p.relative_to(ROOT).as_posix() for p in paths],
+        "slides": [{k: v for k, v in sl.items() if k != "photo"} for sl in slides],  # text, for the tip site
     }
     (out / "post.json").write_text(json.dumps(record, indent=2, ensure_ascii=False) + "\n")
     history.append({"date": record["date"], "topic": record["topic"], "cover_mood": mood})
