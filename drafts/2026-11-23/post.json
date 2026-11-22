@@ -1,0 +1,65 @@
+{
+  "date": "2026-11-23",
+  "topic": "Catching up on a busy family group chat by uploading screenshots, getting a plain summary of what you missed, and drafting a friendly reply",
+  "pillar": "Email, texts and staying in touch (replies, family group chats, thank-you notes)",
+  "cover_mood": "phone",
+  "caption": "Opened the family group chat and found a wall of messages? 📱\n\nTake a few screenshots of what you missed and upload them to ChatGPT, Claude or Gemini.\nAsk for a plain-English catch-up: what was decided, what is still open, and anything asked of you.\nThen have it draft a short, friendly reply you can paste straight in.\nCrop out addresses or account numbers before you upload, and double-check dates and times.\n\nSave this for the next busy week of holiday planning. 💛\nMy free guide, 10 AI Shortcuts, is waiting for you at the link in bio.\n\n#familygroupchat #aiforbeginners #chatgpttips #stayingintouch #techmadeeasy",
+  "images": [
+    "drafts/2026-11-23/01.jpg",
+    "drafts/2026-11-23/02.jpg",
+    "drafts/2026-11-23/03.jpg",
+    "drafts/2026-11-23/04.jpg",
+    "drafts/2026-11-23/05.jpg",
+    "drafts/2026-11-23/06.jpg",
+    "drafts/2026-11-23/07.jpg"
+  ],
+  "slides": [
+    {
+      "type": "cover",
+      "title": "Behind on the family group chat? Try this",
+      "subtitle": "Catch up with a screenshot and one prompt"
+    },
+    {
+      "type": "text",
+      "kicker": "Sound familiar?",
+      "title": "You open the family chat and it is miles long",
+      "body": "Holiday plans, a dozen photos, three side conversations, and somewhere in there a question meant for you. Scrolling back takes ages. A few screenshots can do the catching up for you.",
+      "prompt": ""
+    },
+    {
+      "type": "text",
+      "kicker": "Step 1",
+      "title": "Take 2 or 3 screenshots of what you missed",
+      "body": "Scroll up to where you left off and screenshot down to the latest message. Crop out any addresses or account numbers. In ChatGPT, Claude or Gemini, tap the plus or paperclip to add them.",
+      "prompt": ""
+    },
+    {
+      "type": "prompt",
+      "kicker": "Step 2",
+      "title": "Ask for a plain-English catch-up",
+      "body": "Paste this under your screenshots and fill in your name. It pulls out the bits that matter to you.",
+      "prompt": "These screenshots are from my family group chat. Catch me up in plain English: 1) what has been decided, 2) what is still undecided, 3) any question asked of me, [your name], or anything I am expected to bring or do. Keep it short."
+    },
+    {
+      "type": "prompt",
+      "kicker": "Step 3",
+      "title": "Get a friendly reply ready to paste",
+      "body": "Tell it your answer in a few words. It writes the message, and you copy it into the family chat.",
+      "prompt": "Now write one short, friendly reply I can paste into the chat. My answer is: [for example, I can bring the apple pie and get there around 2]. Keep it warm and casual, under 3 sentences, and answer anyone who asked me something by name."
+    },
+    {
+      "type": "text",
+      "kicker": "Tip",
+      "title": "Prefer to talk? Tap the microphone",
+      "body": "Tap the microphone icon in the message box and say your answer out loud. The AI types it for you. Read the reply once before sending, and check any dates or times against the chat.",
+      "prompt": ""
+    },
+    {
+      "type": "cta",
+      "kicker": "Keep this handy",
+      "title": "Save this for the next busy group chat",
+      "body": "Save this post so it is ready the next time the family chat runs ahead of you. For more simple tricks like this one, grab my free guide, 10 AI Shortcuts, from the link in bio.",
+      "prompt": ""
+    }
+  ]
+}
