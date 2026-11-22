@@ -81,7 +81,8 @@ jobs:
         if: steps.check.outputs.go == 'yes'
         env:
           GH_TOKEN: ${{ github.token }}
-        run: gh issue comment ${{ steps.check.outputs.issue }} --body "Posted (${{ steps.check.outputs.label }}): ${{ steps.post.outputs.link }}"
+        run: |
+          gh issue comment ${{ steps.check.outputs.issue }} --body "Posted (${{ steps.check.outputs.label }}): ${{ steps.post.outputs.link }}"
 
       - name: Report a failure on the issue
         if: failure() && steps.check.outputs.issue != ''
