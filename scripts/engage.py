@@ -58,7 +58,8 @@ SCHEMA = {
             "type": "array",
             "items": {
                 "type": "object",
-                "properties": {"when": {"type": "string"}, "reply": {"type": "string"}},
+                "properties": {"when": {"type": "string", "description": "short situation, e.g. 'A beginner asks how to start'"},
+                               "reply": {"type": "string"}},
                 "required": ["when", "reply"],
                 "additionalProperties": False,
             },
@@ -142,7 +143,7 @@ def main() -> None:
         lines.append(f"- [ ] **{s['platform']}:** [{s['query']}]({url(s['platform'], s['query'])}): {s['why']}")
     lines.append("\n### Starter replies (reword before posting)\n")
     for r in plan["replies"]:
-        lines.append(f"- **When someone {r['when'].rstrip('.')}:**\n  > {r['reply']}")
+        lines.append(f"- **{r['when'].rstrip('.').rstrip(':')}:**\n  > {r['reply']}")
     lines.append("\nClose this issue when you're done. A new list arrives every morning.")
     OUT.mkdir(exist_ok=True)
     (OUT / f"{day.isoformat()}.md").write_text("\n".join(lines) + "\n")
