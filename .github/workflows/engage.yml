@@ -1,0 +1,38 @@
+name: Daily engagement list
+
+on:
+  schedule:
+    - cron: "0 12 * * *"   # 7 AM Eastern (8 AM during daylight time)
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  issues: write
+
+jobs:
+  engage:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - run: pip install -r requirements.txt
+
+      - name: Write today's list
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+        run: python scripts/engage.py
+
+      - name: Open the issue and close yesterday's
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          DAY=$(TZ=America/New_York date +%F)
+          gh label create engage --color 1D76DB --force >/dev/null
+          for n in $(gh issue list --label engage --state open --json number --jq '.[].number'); do
+            gh issue close "$n" --comment "Replaced by today's list."
+          done
+          gh issue create --title "Engage for $DAY" --label engage --body-file "engage/$DAY.md"
