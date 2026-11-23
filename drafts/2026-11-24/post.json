@@ -1,0 +1,73 @@
+{
+  "date": "2026-11-24",
+  "topic": "Getting started: ask the AI to ask you questions first, answer by voice, then have it flag what to double-check",
+  "pillar": "Getting started with AI (where to find it, how to ask, the AI already on your phone)",
+  "cover_mood": "sofa",
+  "caption": "Staring at the AI chat box with no idea what to type? 🤔\n\nTry this: tell it what you need help with, then ask it to ask YOU a few questions first.\nIt asks one question at a time, and you can tap the microphone and answer out loud.\nWhen it's done, ask it to list what it assumed so you know what to double-check.\nAs always, keep account numbers, passwords and ID numbers out of the chat. 🔒\n\nSave this post so the prompt is ready when you need it 📌\nThe free guide, 10 AI Shortcuts, is waiting for you at the link in my bio.\n\n#aiforbeginners #chatgpttips #techhelp #learnsomethingnew #plainenglishai",
+  "images": [
+    "drafts/2026-11-24/01.jpg",
+    "drafts/2026-11-24/02.jpg",
+    "drafts/2026-11-24/03.jpg",
+    "drafts/2026-11-24/04.jpg",
+    "drafts/2026-11-24/05.jpg",
+    "drafts/2026-11-24/06.jpg",
+    "drafts/2026-11-24/07.jpg",
+    "drafts/2026-11-24/08.jpg"
+  ],
+  "slides": [
+    {
+      "type": "cover",
+      "title": "Don't know what to ask AI? Let it ask you",
+      "subtitle": "One line that makes answers fit your life"
+    },
+    {
+      "type": "text",
+      "kicker": "The blank box",
+      "title": "Not sure what to type? That's normal.",
+      "body": "Many people freeze at the empty chat box. A simple fix: say what you want help with, then ask the AI to ask you a few questions before it answers.",
+      "prompt": ""
+    },
+    {
+      "type": "prompt",
+      "kicker": "Copy this",
+      "title": "The ask-me-first prompt",
+      "body": "Works in ChatGPT, Claude, Gemini or Meta AI. Fill in the brackets with your own task.",
+      "prompt": "I want help with [what you need, for example planning my parents' holiday visit]. Before you answer, ask me up to 5 questions, one at a time, so you understand my situation. Then give me your suggestion in plain English."
+    },
+    {
+      "type": "text",
+      "kicker": "Easy answers",
+      "title": "Tap the microphone and just talk",
+      "body": "In ChatGPT, tap the microphone icon next to the typing box and speak your answer. Short answers are fine. Saying I'm not sure is a fine answer too.",
+      "prompt": ""
+    },
+    {
+      "type": "text",
+      "kicker": "Before and after",
+      "title": "Example: a birthday card for your sister",
+      "body": "Asked plainly, the AI writes a card that could suit anyone. Asked to question you first, it learns her age, a shared memory and your tone. The card sounds like the two of you.",
+      "prompt": ""
+    },
+    {
+      "type": "prompt",
+      "kicker": "Last step",
+      "title": "Ask it what to double-check",
+      "body": "Paste this once it gives you its answer. It shows you any guesses it made along the way.",
+      "prompt": "Thank you. Now list anything you assumed about my situation, and anything I should double-check before I use this."
+    },
+    {
+      "type": "text",
+      "kicker": "Stay safe",
+      "title": "Keep private details out of the chat",
+      "body": "Answer its questions in general terms. Leave out account numbers, passwords and ID numbers. Saying my bank or my mum's doctor gives it plenty to work with.",
+      "prompt": ""
+    },
+    {
+      "type": "cta",
+      "kicker": "Keep this handy",
+      "title": "Save this for the next time you get stuck",
+      "body": "Want more simple tricks like this one? Grab the free guide, 10 AI Shortcuts, from the link in my bio.",
+      "prompt": ""
+    }
+  ]
+}
