@@ -1,0 +1,7 @@
+{
+  "date": "2026-11-23",
+  "slot": "am",
+  "topic": "Turning a photo of a handwritten holiday card address list into a CSV spreadsheet",
+  "text": "If your holiday card addresses live in an old address book, one photo of the page can become a tidy list you can actually use.\n\n\"Turn this photo of my address list into a table with Name, Street, City, State and ZIP. Mark anything you can't read with a question mark. Give it to me as a CSV file.\"\n\nTap the plus button to add the photo. The CSV opens in Excel or Google Sheets, so you can print labels later.\n\nHow many cards do you usually send?",
+  "source": "claude"
+}

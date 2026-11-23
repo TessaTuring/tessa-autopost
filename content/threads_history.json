@@ -43,5 +43,20 @@
     "date": "2026-11-22",
     "topic": "Ask me first",
     "source": "library"
+  },
+  {
+    "date": "2026-11-23",
+    "topic": "Screenshots of the group chat",
+    "source": "library"
+  },
+  {
+    "date": "2026-11-23",
+    "topic": "Turning a photo of a handwritten holiday card address list into a CSV spreadsheet",
+    "source": "claude-am"
+  },
+  {
+    "date": "2026-11-23",
+    "topic": "Evening question: text or call when checking in with family during Thanksgiving week",
+    "source": "claude-pm"
   }
 ]
