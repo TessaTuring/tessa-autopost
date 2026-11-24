@@ -1,0 +1,73 @@
+{
+  "date": "2026-11-25",
+  "topic": "Photograph a confusing official letter, get a plain-English explanation, and ask the AI what to double-check before calling the sender",
+  "pillar": "Letters, forms and paperwork made plain (general help only, never legal or financial advice)",
+  "cover_mood": "kitchen",
+  "caption": "That letter you have read three times and still can't quite follow? 📬\n\nTake a photo of it (cover your account and ID numbers first) and upload it to ChatGPT, Claude or Gemini.\nAsk for a plain-English summary: what it is about, what you need to do, and any deadlines.\nThen ask which parts to confirm, and get a few polite questions ready for your call.\nFor anything important, call the sender using the number on your card or their official website.\n\nSave this for the next time an official envelope lands on the counter.\n\nMy free guide, 10 AI Shortcuts, is waiting for you at the link in bio.\nThe AI Made Simple 7-day guided workbook is linked there too, if you'd like to practice step by step. 😊\n\n#aiforbeginners #paperworkhelp #plainenglish #chatgpttips #lifeadmin",
+  "images": [
+    "drafts/2026-11-25/01.jpg",
+    "drafts/2026-11-25/02.jpg",
+    "drafts/2026-11-25/03.jpg",
+    "drafts/2026-11-25/04.jpg",
+    "drafts/2026-11-25/05.jpg",
+    "drafts/2026-11-25/06.jpg",
+    "drafts/2026-11-25/07.jpg",
+    "drafts/2026-11-25/08.jpg"
+  ],
+  "slides": [
+    {
+      "type": "cover",
+      "title": "That confusing letter? Snap a photo and ask",
+      "subtitle": "A plain-English read of official mail"
+    },
+    {
+      "type": "text",
+      "kicker": "The problem",
+      "title": "Official letters can feel like a puzzle",
+      "body": "Insurance notices, benefit letters, billing statements. The one thing you need to do is often buried on page two. A photo and a short prompt can pull it out for you.",
+      "prompt": ""
+    },
+    {
+      "type": "text",
+      "kicker": "Before you snap",
+      "title": "Cover your private details first",
+      "body": "Fold over or cover account numbers, ID numbers and your signature, then take the photo. The AI only needs the wording to explain the letter.",
+      "prompt": ""
+    },
+    {
+      "type": "text",
+      "kicker": "How to upload",
+      "title": "Tap the plus or paperclip icon",
+      "body": "In ChatGPT, Claude or Gemini, tap the plus or paperclip icon next to the message box, choose Camera or Photos, and add your picture.",
+      "prompt": ""
+    },
+    {
+      "type": "prompt",
+      "kicker": "Prompt 1",
+      "title": "Get the plain-English version",
+      "body": "Paste this in with your photo. Fill in the part in brackets.",
+      "prompt": "Here is a photo of a letter from [who sent it]. Explain it in plain, everyday English. Then list: 1. What it is about 2. What, if anything, I need to do 3. Any dates or deadlines 4. Any tricky words, with simple meanings."
+    },
+    {
+      "type": "prompt",
+      "kicker": "Prompt 2",
+      "title": "Ask what to double-check",
+      "body": "Send this right after the first answer, in the same chat.",
+      "prompt": "Which parts of your explanation should I confirm with the sender directly? Then write 3 short, polite questions I can ask when I call them about [my main worry or question]."
+    },
+    {
+      "type": "text",
+      "kicker": "Good to know",
+      "title": "The sender has the final word",
+      "body": "AI can misread a blurry photo. To confirm anything about money, health or deadlines, call the sender using the number on your card or their official website.",
+      "prompt": ""
+    },
+    {
+      "type": "cta",
+      "kicker": "Save this",
+      "title": "Keep this for the next confusing letter",
+      "body": "Save this post so the prompts are handy when the mail arrives. For more simple tricks, grab my free guide, 10 AI Shortcuts, from the link in bio.",
+      "prompt": ""
+    }
+  ]
+}

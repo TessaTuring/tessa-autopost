@@ -78,5 +78,10 @@
     "date": "2026-11-24",
     "topic": "Getting started: ask the AI to ask you questions first, answer by voice, then have it flag what to double-check",
     "cover_mood": "sofa"
+  },
+  {
+    "date": "2026-11-25",
+    "topic": "Photograph a confusing official letter, get a plain-English explanation, and ask the AI what to double-check before calling the sender",
+    "cover_mood": "kitchen"
   }
 ]
