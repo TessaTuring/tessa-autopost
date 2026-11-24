@@ -58,5 +58,20 @@
     "date": "2026-11-23",
     "topic": "Evening question: text or call when checking in with family during Thanksgiving week",
     "source": "claude-pm"
+  },
+  {
+    "date": "2026-11-24",
+    "topic": "Already on your phone",
+    "source": "library"
+  },
+  {
+    "date": "2026-11-24",
+    "topic": "Snapping a photo of a mystery blinking light on an appliance and asking AI what it means, with the model number",
+    "source": "claude-am"
+  },
+  {
+    "date": "2026-11-24",
+    "topic": "Evening question: the first thing you'd want to try asking AI, with nobody looking over your shoulder",
+    "source": "claude-pm"
   }
 ]
