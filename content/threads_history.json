@@ -73,5 +73,20 @@
     "date": "2026-11-24",
     "topic": "Evening question: the first thing you'd want to try asking AI, with nobody looking over your shoulder",
     "source": "claude-pm"
+  },
+  {
+    "date": "2026-11-25",
+    "topic": "Decode the letter",
+    "source": "library"
+  },
+  {
+    "date": "2026-11-25",
+    "topic": "Photograph a blank form before filling it in and have AI make a checklist of facts and documents to gather, flagging confusing questions",
+    "source": "claude-am"
+  },
+  {
+    "date": "2026-11-25",
+    "topic": "Evening question: which kind of mail sits on the counter the longest before you open it",
+    "source": "claude-pm"
   }
 ]

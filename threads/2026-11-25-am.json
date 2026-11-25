@@ -1,0 +1,7 @@
+{
+  "date": "2026-11-25",
+  "slot": "am",
+  "topic": "Photograph a blank form before filling it in and have AI make a checklist of facts and documents to gather, flagging confusing questions",
+  "text": "Got a new doctor's intake packet or a long application to fill out? Snap a photo of the blank pages first. In ChatGPT, tap the plus sign to add it, then paste:\n\nList every fact and document I'll need to gather before filling in this [type of form], and flag any question that's easy to misread.\n\nPhotograph it while it's still blank so no private details go in. Which form is waiting on your table?",
+  "source": "claude"
+}
