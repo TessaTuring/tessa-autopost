@@ -83,5 +83,10 @@
     "date": "2026-11-25",
     "topic": "Photograph a confusing official letter, get a plain-English explanation, and ask the AI what to double-check before calling the sender",
     "cover_mood": "kitchen"
+  },
+  {
+    "date": "2026-11-26",
+    "topic": "Screenshot an online deal before buying and ask AI for the full cost, return window, small print and a side-by-side comparison",
+    "cover_mood": "phone"
   }
 ]

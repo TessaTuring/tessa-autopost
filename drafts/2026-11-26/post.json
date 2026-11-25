@@ -1,0 +1,65 @@
+{
+  "date": "2026-11-26",
+  "topic": "Screenshot an online deal before buying and ask AI for the full cost, return window, small print and a side-by-side comparison",
+  "pillar": "Money and household admin (bills, budgets, subscriptions; general tips only, never financial advice)",
+  "cover_mood": "phone",
+  "caption": "Before you tap Buy this week, try one screenshot 🛒\n\nTake a screenshot of the deal and share it with ChatGPT, Claude or Gemini.\nAsk for the total cost with shipping, the return window and the small print.\nFound it in two places? Upload both and get a simple side-by-side table.\nIf the deal came by text or email, check it on the store's official website by typing the address yourself.\n\nSave this for the holiday sales 📌\nMore easy tricks in my free guide, 10 AI Shortcuts. Link in bio.\n\n#aiforbeginners #holidayshopping #blackfriday #householdadmin #chatgpttips",
+  "images": [
+    "drafts/2026-11-26/01.jpg",
+    "drafts/2026-11-26/02.jpg",
+    "drafts/2026-11-26/03.jpg",
+    "drafts/2026-11-26/04.jpg",
+    "drafts/2026-11-26/05.jpg",
+    "drafts/2026-11-26/06.jpg",
+    "drafts/2026-11-26/07.jpg"
+  ],
+  "slides": [
+    {
+      "type": "cover",
+      "title": "Screenshot a sale before you tap Buy",
+      "subtitle": "A 1-minute check for holiday deals"
+    },
+    {
+      "type": "text",
+      "kicker": "The problem",
+      "title": "Sale pages are built to hurry you",
+      "body": "Countdown clocks, big red prices, tiny print. One screenshot and one question to ChatGPT, Claude or Gemini shows you the full picture before you pay.",
+      "prompt": ""
+    },
+    {
+      "type": "text",
+      "kicker": "Step 1",
+      "title": "Take a screenshot of the deal",
+      "body": "Capture the price, the shipping line and the return details if you can see them. In the AI app, tap the plus or paperclip icon, then choose your screenshot.",
+      "prompt": ""
+    },
+    {
+      "type": "prompt",
+      "kicker": "Step 2",
+      "title": "Ask for the full picture",
+      "body": "Send this along with your screenshot. Fill in the brackets.",
+      "prompt": "I'm thinking of buying this for [what I need it for]. From this screenshot, list the total cost including shipping, the return window, what's included, and anything in the small print I should check before buying."
+    },
+    {
+      "type": "prompt",
+      "kicker": "Step 3",
+      "title": "Compare two offers side by side",
+      "body": "Saw it somewhere else too? Upload both screenshots in the same message.",
+      "prompt": "Here are two offers for [item]. Put them in a simple table: price, shipping, delivery date, return policy and warranty. Then tell me which details you couldn't see so I can check them on each store's website."
+    },
+    {
+      "type": "text",
+      "kicker": "Stay safe",
+      "title": "Got the deal by text or email?",
+      "body": "Ask the AI if anything looks off, then go to the store's official website by typing the address yourself. Keep card numbers and passwords out of the chat.",
+      "prompt": ""
+    },
+    {
+      "type": "cta",
+      "kicker": "Save this",
+      "title": "Keep this handy for holiday sales",
+      "body": "Save this post for your next sale screenshot. For more simple tricks like this, grab the free guide, 10 AI Shortcuts, from the link in bio.",
+      "prompt": ""
+    }
+  ]
+}
