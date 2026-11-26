@@ -88,5 +88,20 @@
     "date": "2026-11-25",
     "topic": "Evening question: which kind of mail sits on the counter the longest before you open it",
     "source": "claude-pm"
+  },
+  {
+    "date": "2026-11-26",
+    "topic": "Before you pay that bill",
+    "source": "library"
+  },
+  {
+    "date": "2026-11-26",
+    "topic": "Photograph the Thanksgiving grocery receipts from several family members and have AI total who paid what and work out the fewest payments to settle up",
+    "source": "claude-am"
+  },
+  {
+    "date": "2026-11-26",
+    "topic": "Evening question: which piece of household paperwork you'd hand to a patient helper first, Thanksgiving night",
+    "source": "claude-pm"
   }
 ]
