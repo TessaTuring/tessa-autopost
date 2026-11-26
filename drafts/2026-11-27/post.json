@@ -1,0 +1,74 @@
+{
+  "date": "2026-11-27",
+  "topic": "AI tools worth trying if you're one of the grandparents",
+  "pillar": "AI tool picks for one kind of person",
+  "cover_mood": "graphic",
+  "caption": "Five AI tools that fit right into grandparent life 👵👴\n\nMeta AI lives inside WhatsApp, so help is one chat away.\nGoogle Lens answers the endless what-is-that questions on walks.\nKhanmigo, Canva and ChatGPT cover homework help, party flyers and visit plans.\nBefore you sign up, check each tool's current pricing and privacy settings.\n\nSave this for the next time the grandkids come over 📌\nThe free guide, 10 AI Shortcuts, is waiting in my bio.\nIf you'd like to practice step by step, the AI Made Simple 7-day guided workbook is linked there too.\n\n#grandparents #aiforbeginners #grandparentlife #techtips #aitools",
+  "images": [
+    "drafts/2026-11-27/01.jpg",
+    "drafts/2026-11-27/02.jpg",
+    "drafts/2026-11-27/03.jpg",
+    "drafts/2026-11-27/04.jpg",
+    "drafts/2026-11-27/05.jpg",
+    "drafts/2026-11-27/06.jpg",
+    "drafts/2026-11-27/07.jpg",
+    "drafts/2026-11-27/08.jpg"
+  ],
+  "slides": [
+    {
+      "type": "cover",
+      "title": "5 AI tools worth trying if you're a grandparent",
+      "subtitle": "Picks for visits, chats and homework help",
+      "kicker": "AI tools for grandparents"
+    },
+    {
+      "type": "text",
+      "kicker": "Meta AI",
+      "title": "Get help right inside your WhatsApp family chat",
+      "body": "Open a chat with Meta AI in WhatsApp and ask for a warm birthday message for a grandchild, or a fun question to post in the family group to get everyone talking.",
+      "prompt": ""
+    },
+    {
+      "type": "text",
+      "kicker": "Google Lens",
+      "title": "Answer the grandkids' what-is-that questions",
+      "body": "On a walk, point your phone camera at a leaf, bug or flower and Lens suggests what it is. It can also translate a sign or a label when you travel together.",
+      "prompt": ""
+    },
+    {
+      "type": "text",
+      "kicker": "Khanmigo",
+      "title": "Help with homework without doing it for them",
+      "body": "When a grandchild is stuck on homework during a visit, sit together with Khan Academy's AI tutor and let it coach them through the question while you cheer them on.",
+      "prompt": ""
+    },
+    {
+      "type": "text",
+      "kicker": "Canva",
+      "title": "Make a flyer for a family party or reunion",
+      "body": "Pick a flyer design, type the date, place and what to bring, and add a favorite photo. Print it for the fridge or share it in the family chat.",
+      "prompt": ""
+    },
+    {
+      "type": "text",
+      "kicker": "ChatGPT",
+      "title": "Plan a visit full of things to do together",
+      "body": "Share the grandkids' ages, what they love and what supplies you have, then ask for easy activities. Tap the microphone icon to say it out loud if typing feels slow.",
+      "prompt": ""
+    },
+    {
+      "type": "prompt",
+      "kicker": "Try this today",
+      "title": "Plan a grandkid visit in one prompt",
+      "body": "Works in ChatGPT, Claude or Gemini. Leave out full names, school names and home addresses.",
+      "prompt": "My grandchildren are [ages] and love [interests]. They're visiting for [how long] and I have [space or supplies]. Before you plan, ask me 3 questions. Then give an easy plan: one indoor and one outdoor idea per day, plus anything to check for safety."
+    },
+    {
+      "type": "cta",
+      "kicker": "Save this",
+      "title": "Keep this handy for the next visit",
+      "body": "Save this post so the list is ready when you need it. Grab the free guide, 10 AI Shortcuts, with the link in bio.",
+      "prompt": ""
+    }
+  ]
+}
