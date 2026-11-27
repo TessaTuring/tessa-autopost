@@ -1,0 +1,73 @@
+{
+  "date": "2026-11-28",
+  "topic": "Photograph a handwritten family recipe card, have AI type it up, modernize and scale it, then flag what to double-check",
+  "pillar": "Home, family and everyday life (meals, trips, gifts, grandkids, celebrations)",
+  "cover_mood": "kitchen",
+  "caption": "That handwritten recipe card everyone loves can become a clear, printable recipe in a few minutes 📸🥧\n\nTake a photo of the card and upload it to ChatGPT, Claude or Gemini.\nAsk it to type the card up exactly, then update old measurements and scale it for your crowd.\nLast step: ask what to double-check, so you know which guesses to confirm with family or test first.\n\nSave this for the next time you find an old recipe card in the drawer 🔖\nFor more simple tricks, my free guide 10 AI Shortcuts is waiting at the link in bio.\n\n#familyrecipes #aiforbeginners #chatgpttips #grandparentlife #holidaybaking",
+  "images": [
+    "drafts/2026-11-28/01.jpg",
+    "drafts/2026-11-28/02.jpg",
+    "drafts/2026-11-28/03.jpg",
+    "drafts/2026-11-28/04.jpg",
+    "drafts/2026-11-28/05.jpg",
+    "drafts/2026-11-28/06.jpg",
+    "drafts/2026-11-28/07.jpg",
+    "drafts/2026-11-28/08.jpg"
+  ],
+  "slides": [
+    {
+      "type": "cover",
+      "title": "Turn that old family recipe card into one you can use",
+      "subtitle": "Snap a photo, get it typed and scaled"
+    },
+    {
+      "type": "text",
+      "kicker": "The problem",
+      "title": "That faded recipe card in the drawer",
+      "body": "Family recipes are often faded, use old measurements and skip steps the cook just knew. A phone photo and three short prompts can turn one into a clear recipe the whole family can follow.",
+      "prompt": ""
+    },
+    {
+      "type": "text",
+      "kicker": "Step 1",
+      "title": "Take a clear photo of the card",
+      "body": "Lay the card flat near a window so the writing is easy to see. In ChatGPT, Claude or Gemini, tap the plus or paperclip icon, choose your photo, then paste the prompt on the next slide.",
+      "prompt": ""
+    },
+    {
+      "type": "prompt",
+      "kicker": "Prompt 1: type it up",
+      "title": "Get the card typed exactly as written",
+      "body": "Send this with your photo. Fill in the parts in square brackets.",
+      "prompt": "This is a photo of my [grandmother's] handwritten recipe for [dish]. Please type it up exactly as written. Where a word or amount is hard to read, tell me and give your best guess. Then list any steps the card seems to leave out."
+    },
+    {
+      "type": "prompt",
+      "kicker": "Prompt 2: make it usable",
+      "title": "Update the measurements and scale it",
+      "body": "Send this next in the same chat so it remembers the recipe.",
+      "prompt": "Now rewrite this as a clear, numbered recipe for [number] people. Change old terms like a moderate oven or a teacup of flour into today's amounts and oven temperatures in [Fahrenheit or Celsius]. Next to each change, show the original wording so nothing is lost."
+    },
+    {
+      "type": "prompt",
+      "kicker": "Prompt 3: check it",
+      "title": "Ask what to double-check before you cook",
+      "body": "Old recipes can hide guesses. This prompt brings them to the surface.",
+      "prompt": "What in this recipe should I double-check with a relative or test on a small batch first? Point out every guess you made, any amounts or timings that look unusual, and anything a first-timer might get wrong."
+    },
+    {
+      "type": "text",
+      "kicker": "Tip",
+      "title": "Share it so the family can fill the gaps",
+      "body": "Ask the AI to lay the recipe out on one page for printing, then send it to the family group chat. Someone may remember the missing step only they knew.",
+      "prompt": ""
+    },
+    {
+      "type": "cta",
+      "kicker": "Keep this one",
+      "title": "Save this for the next recipe card you find",
+      "body": "Want more tricks like this? Grab my free guide, 10 AI Shortcuts, with the link in bio.",
+      "prompt": ""
+    }
+  ]
+}
