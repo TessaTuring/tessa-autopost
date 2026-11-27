@@ -103,5 +103,20 @@
     "date": "2026-11-26",
     "topic": "Evening question: which piece of household paperwork you'd hand to a patient helper first, Thanksgiving night",
     "source": "claude-pm"
+  },
+  {
+    "date": "2026-11-27",
+    "topic": "Appointment prep",
+    "source": "library"
+  },
+  {
+    "date": "2026-11-27",
+    "topic": "Photograph a confusing knitting or crochet pattern and have AI ask which row you're stuck on, then explain it stitch by stitch",
+    "source": "claude-am"
+  },
+  {
+    "date": "2026-11-27",
+    "topic": "Evening question: the one phone or computer skill you've always meant to learn, asked over the long holiday weekend",
+    "source": "claude-pm"
   }
 ]
