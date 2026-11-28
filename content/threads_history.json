@@ -118,5 +118,20 @@
     "date": "2026-11-27",
     "topic": "Evening question: the one phone or computer skill you've always meant to learn, asked over the long holiday weekend",
     "source": "claude-pm"
+  },
+  {
+    "date": "2026-11-28",
+    "topic": "The handwritten recipe card",
+    "source": "library"
+  },
+  {
+    "date": "2026-11-28",
+    "topic": "Photograph the rule sheet of a new board game and have AI explain setup, turns, a read-aloud version for kids, and easy-to-miss rules",
+    "source": "claude-am"
+  },
+  {
+    "date": "2026-11-28",
+    "topic": "Evening question: who in the family everyone hands their phone to when something stops working, over Thanksgiving weekend",
+    "source": "claude-pm"
   }
 ]

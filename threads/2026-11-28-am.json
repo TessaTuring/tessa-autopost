@@ -1,0 +1,7 @@
+{
+  "date": "2026-11-28",
+  "slot": "am",
+  "topic": "Photograph the rule sheet of a new board game and have AI explain setup, turns, a read-aloud version for kids, and easy-to-miss rules",
+  "text": "If a new board game came out after Thanksgiving dinner and nobody wants to read the rule sheet, snap a clear photo of it.\n\n\"Here are the rules for [game name] in this photo. Explain setup, then how a turn works, in plain steps. Add a short version to read aloud to kids ages [ages], and list rules that are easy to miss.\"\n\nTap the plus or paperclip to add the photo, and include both sides.\n\nWhich game comes out first when family visits?",
+  "source": "claude"
+}
